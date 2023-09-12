@@ -1,4 +1,4 @@
-package co;
+package com.Chapter2.Chapter2;
 
 public class ex2_1 {
     public static void djeMaker(){

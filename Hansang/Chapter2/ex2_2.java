@@ -1,4 +1,4 @@
-package com.Hansang;
+package com.Chapter2.Chapter2;
 
 public class ex2_2 {
 

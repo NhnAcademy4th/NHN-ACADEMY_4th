@@ -1,4 +1,4 @@
-package com.Hansang;
+package com.Chapter2.Chapter2;
 
 import java.util.Scanner;
 
