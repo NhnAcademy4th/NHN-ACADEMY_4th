@@ -10,7 +10,7 @@ public class ex2_5 {
         eggs = eggs % 144;
 
         int dozen = eggs / 12;
-        eggs = eggs % 14;
+        eggs = eggs % 12;
 
         System.out.println("Your number of eggs is " + gross + " gross, " + dozen + " dozen, and " + eggs);
     }
