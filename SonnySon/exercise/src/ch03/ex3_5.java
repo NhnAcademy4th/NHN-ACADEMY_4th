@@ -1,7 +1,6 @@
 package ch03;
 
-public class ex3_2 {
-
+public class ex3_5 {
     public static void main(String[] args) {
 
         // 1-10000 약수가 가장 많은 수 구하기
@@ -25,5 +24,4 @@ public class ex3_2 {
 
         System.out.println(max_number + "," + max_count);
     }
-
 }

@@ -1,13 +1,10 @@
 package ch03;
 
-public class ex3_2 {
-
+public class ex3_6 {
     public static void main(String[] args) {
 
-        // 1-10000 약수가 가장 많은 수 구하기
+        int[] counts = new int[10000];
         int count;
-
-        int max_number = 0;
         int max_count = 0;
 
         for (int i = 1; i < 10000; i++) {
@@ -17,13 +14,19 @@ public class ex3_2 {
                     count++;
                 }
             }
-            if (count > max_count) {
+
+            counts[i] = count;
+
+            if (max_count < count) {
                 max_count = count;
-                max_number = i;
             }
+
         }
 
-        System.out.println(max_number + "," + max_count);
+        for (int i = 0; i < counts.length; i++) {
+            if (counts[i] == max_count) {
+                System.out.println(i);
+            }
+        }
     }
-
 }
