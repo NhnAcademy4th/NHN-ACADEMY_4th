@@ -56,7 +56,7 @@ Q13What is the purpose of an import directive, such as import textio.TextIO or i
 import를 함으로 써 이미 만들어놓은 객체들을 불러들여 원하는 결과를 도출하기 위해 재사용하는 것이 가능하다.
 
 Q14Write a complete program that asks the user to enter the number of "widgets" they want to buy and the cost per widget. The program should then output the total cost for all the widgets. Use System.out.printf to print the cost, with two digits after the decimal point. You do not need to include any comments in the program.
-
+깃허브 내부에 별도로 작성함
 
 
 
