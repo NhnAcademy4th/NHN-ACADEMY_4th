@@ -1,26 +1,63 @@
-Q1
+Q1Briefly explain what is meant by the syntax and the semantics of a programming language. Give an example to illustrate the difference between a syntax error and a semantics error.
+만약 프로그래밍 언어를 영어로 치환하자면 syntax는 문법이다. 그리고 semantics는 그것이 단지 단어의 나열이 아닌 의미를 가지고있는 집합인지를 판별하는 것이다.
+
+Q2What does the computer do when it executes a variable declaration statement. Give an example.
+변수가 선언은 차량을 차량등록국에 등록하는 것과 비슷하다. 차의 이름(번호판)이 유효한지, 차의 등록인(type)이 유효한지와 만약 차량에 누군가 탑승하려고 한다면(변수가 할당된다면)
+차량의 주인이 맞는지(type)이 일치하는 지 확인하는 것이다.
+
+Q3What is a type, as this term relates to programming?
+type이란 미리 정해놓은 종류의 모음이다. 예를 들어 변수가 텃밭이라면 tpye은 팻말이다. 우리는 텃밭에 자라지 않은 작물이 있다고 해도 해당 작물이
+어떤작물인지 팻말을 보고 알 수 있다. 자바에서 type 반드시 지켜져야하는 규칙이다. 그렇기 때문에 변수에 해당 type이 아닌 값이 들어가면
+문법오류가 뜨게 된다. 자바에는 8개의 원시 자료형이 있다.
+
+ 
+Q4One of the primitive types in Java is boolean. What is the boolean type? Where are boolean values used? What are its possible values?
+boolean은 논리형 값인 true 혹은 false를 받아야한다. boolean자료형은 논리식의 참과 거짓을 판별하여 참과 거짓 두가지중 하나의 값을 반환하는 것에 사용된다.
+
+Q5Give the meaning of each of the following Java operators:
+
+a)    ++
+해당 연산자는 변수의 값을 1만큼 추가한다는 의미이다. 
+
+b)    &&
+해당 연산자는 조건연산자로서 논리 게이트의 and와 역활이 같다.
+양옆의 조건이 반드시 참일때만 해당 연산자를 통과할 수 있다.
+
+c)    !=
+해당 연산자도 조건연산에 사용되는 연산자이다. not equal이라는 의미로 사용된다.
 
 
-Q2
+Q6Explain what is meant by an assignment statement, and give an example. What are assignment statements used for?
+할당문은 변수에 값이 담긴 메모리의 주소를 할당하는 것을 의미한다. 현실 세계에서 서랍에 무엇이 들었는지 또는 이름표를 붙혀주는 것과 같다.
+
+Q7What is meant by precedence of operators?
+연산자 우선순위는 수학의 연산과 유사하게 작동한다. 일반적으로 왼쪽에서 오른쪽으로 연산이 일뤄지지만
+단항 연산자와 할당 연산자만큼은 오른쪽에서 왼쪽으로 연산이 일어난다.
+
+Q8What is a literal?
+코드에서 데이터를 타입에 맞춰 표기하는 방법이다.
+
+Q9In Java, classes have two fundamentally different purposes. What are they?
+클래스는 함수의 패키지가 될 수도 있고 객체의 이름이 될 수 있다.
+
+Q10What is the difference between the statement "x = TextIO.getDouble();" and the statement "x = TextIO.getlnDouble();"
+get은 여러 항목을 읽어오기 위한 함수이고 getin은 하나의 행에서 하나의 항목만을 읽어오기 위한 함수이다.
+
+Q11Explain why the value of the expression 2 + 3 + "test" is the string "5test" while the value of the expression "test" + 2 + 3 is the string "test23". What is the value of "test" + 2 * 3 ?
+먼저 앞의 식이 5test가 된 것은 기본적으로 산술연산자인 + 가 왼쪽에서 오른쪽으로 동작하기 때문이며 +의 경우 더해지는 값이 스트링이라면 String 값이 아닌값을 형변환 시켜주기 때문이다.
+마찬가지의 이유로 두번째 식은 test가 더 먼저 있었기 때문에 "test2" > "test23"으로 결과가 도출된 것이고, 마지막 으로 "test" + 2 * 3의 경우 곱셈 연산자의 우선순위가 +연산자의 우선순위보다
+높기 때문에 해당 식은 2*3부분 부터 작동하게 되고 "test" + 6 > "test6"이 될 것이다.
 
 
-Q3
+Q12Integrated Development Environments such as Eclipse often use syntax coloring, which assigns various colors to the characters in a program to reflect the syntax of the language. A student notices that Eclipse colors the word String differently from int, double, and boolean. The student asks why String should be a different color, since all these words are names of types. What's the answer to the student's question?
+syntax coloring을 통해 변수와 타입의 색 차이를 두어 가시성을 높일 수 있다.
 
-Q4
+Q13What is the purpose of an import directive, such as import textio.TextIO or import java.util.Scanner?
+import를 함으로 써 이미 만들어놓은 객체들을 불러들여 원하는 결과를 도출하기 위해 재사용하는 것이 가능하다.
 
-Q5
+Q14Write a complete program that asks the user to enter the number of "widgets" they want to buy and the cost per widget. The program should then output the total cost for all the widgets. Use System.out.printf to print the cost, with two digits after the decimal point. You do not need to include any comments in the program.
 
-Q6
 
-Q7
 
-Q8
 
-Q9
 
-Q10
-
-Q11
-Q12
-Q13
-Q14
