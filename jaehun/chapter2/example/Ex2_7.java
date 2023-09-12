@@ -1,6 +1,6 @@
 package chapter2.example;
 
-import chapter2.textio.TextIO;
+import textio.TextIO;
 
 public class Ex2_7 {
     public static void main(String[] args) {
