@@ -1,27 +1,23 @@
 import java.util.Scanner;
+import textio.Textio;
 
 public class Ex_2_7 {
     public static void main(String[] args) {
         String name;
-        int score1;
-        int score2;
-        int score3;
+        int score1, score2, score3;
         double average;
 
-        Scanner scn = new Scanner(System.in);
-        System.out.print("이름: ");
-        name = scn.next();
-        System.out.print("국어: ");
-        score1 = scn.nextInt();
-        System.out.print("수학: ");
-        score2 = scn.nextInt();
-        System.out.print("영어: ");
-        score3 = scn.nextInt();
+        Textio.readFile("./ch2/testdata.txt");
 
-        average = (score1 + score2 + score3) / 3;
-        System.out.println(average);
+        name = Textio.getln();
+        score1 = Textio.getlnInt();
+        score2 = Textio.getlnInt();
+        score3 = Textio.getlnInt();
 
-        scn.close();
+        average = (score1 + score2 + score3) / 3.0;
+
+        System.out.printf("%s 학생의 평균: %1.1f ", name, average);
+
     }
 
 }
