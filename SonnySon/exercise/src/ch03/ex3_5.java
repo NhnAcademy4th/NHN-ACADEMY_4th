@@ -1,27 +1,25 @@
 package ch03;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
 public class ex3_5 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        FileReader reader = new FileReader("src/ch03/sales.dat");
+        Scanner sc = new Scanner(reader);
 
-        // 1-10000 약수가 가장 많은 수 구하기
-        int count;
-
-        int max_number = 0;
-        int max_count = 0;
-
-        for (int i = 1; i < 10000; i++) {
-            count = 0;
-            for (int j = 1; j < i; j++) {
-                if (i % j == 0) {
-                    count++;
-                }
-            }
-            if (count > max_count) {
-                max_count = count;
-                max_number = i;
+        int sum = 0;
+        int noReportCount = 0;
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            try {
+                sum += Double.parseDouble(line.substring(line.indexOf(":") + 1));
+            } catch (NumberFormatException e) {
+                noReportCount++;
             }
         }
-
-        System.out.println(max_number + "," + max_count);
+        System.out.println("Cities sale : " + sum);
+        System.out.println("no Report Cities Count : " + noReportCount);
     }
 }
