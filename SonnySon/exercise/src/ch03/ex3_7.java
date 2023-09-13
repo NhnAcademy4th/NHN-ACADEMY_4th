@@ -19,6 +19,7 @@ public class ex3_7 {
 
     private static int solution2() {
         boolean[] birthDay = new boolean[365];
+
         int count = 0;
         for (int i = 0; i < birthDay.length; i++) {
             int randomDay = (int) (Math.random() * 365);
@@ -38,7 +39,7 @@ public class ex3_7 {
         int random;
         int tries = 0;
 
-        // 종료조건 컨닝함
+        // 종료 조건 컨닝함
         while (count < 365) {
             random = (int) (Math.random() * 365);
             if (birthDay[random] == false) {
@@ -46,7 +47,6 @@ public class ex3_7 {
                 birthDay[random] = true;
             }
             tries++;
-
         }
         return tries;
     }

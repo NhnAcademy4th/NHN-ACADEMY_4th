@@ -11,6 +11,7 @@ public class ex3_4 {
                 if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
                     System.out.print(c);
             }else if(c == ' '){
+                    //정규표현식을 이용해 보시오
                     System.out.println();
                 }
 
