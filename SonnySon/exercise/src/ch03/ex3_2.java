@@ -24,6 +24,7 @@ public class ex3_2 {
         }
 
         System.out.println(max_number + "," + max_count);
+
     }
 
 }
