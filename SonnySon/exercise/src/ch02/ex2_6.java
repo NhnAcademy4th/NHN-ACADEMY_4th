@@ -1,6 +1,7 @@
 package ch02;
 
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class ex2_6 {
     public static void main(String[] args) {
