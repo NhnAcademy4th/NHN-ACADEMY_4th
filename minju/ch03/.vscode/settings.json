@@ -1,0 +1,11 @@
+{
+  "java.project.referencedLibraries": {
+    "include": ["lib/**/*.jar", "/Users/mj/**/*.jar"],
+    "exclude": [
+      "/Users/mj/Library/Application Support/JetBrains/IntelliJIdea2023.2/plugins/CheckStyle-IDEA/checkstyle/lib/Saxon-HE-10.6.jar",
+      "/Users/mj/Library/Application Support/JetBrains/IntelliJIdea2023.2/plugins/CheckStyle-IDEA/checkstyle/lib/Saxon-HE-11.3.jar",
+      "/Users/mj/Library/Application Support/JetBrains/IntelliJIdea2023.2/plugins/CheckStyle-IDEA/checkstyle/lib/Saxon-HE-11.4.jar",
+      "/Users/mj/Library/Application Support/JetBrains/IntelliJIdea2023.2/plugins/CheckStyle-IDEA/checkstyle/lib/Saxon-HE-12.0.jar"
+    ]
+  }
+}
