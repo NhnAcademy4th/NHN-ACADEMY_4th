@@ -9,6 +9,8 @@ public class ex3_3 {
         if(operator == '+'){
             result = num1 + num2;
             System.out.println("calculate " + (int)num1 + operator + (int)num2 +" is "+ (int)result);
+            //예외 처리문도 추가바람
+            //예외 가려줄 수 있는 것은 가려주었으면 좋겠다..
         }   else if(operator == '-'){
             result = num1 - num2;
             System.out.println("calculate " + (int)num1 + operator + (int)num2 +" is "+ (int)result);
@@ -36,6 +38,7 @@ public class ex3_3 {
             double num2 = sc.nextDouble();
 
             calculater(num1, num2, operator);
+            //오퍼레이터 예외처리도 추가바람
         }
 
     }

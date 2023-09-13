@@ -22,6 +22,8 @@ public class ex3_6 {
         ArrayList<Integer> numList = new ArrayList<>();
         ArrayList<Integer> result;
 
+        //어레이 리스트를 줄일려고 노력해보길...
+
         for(int i = 1; i <= maxNum; i++){
             count = 0;
             for(int j = 1; j <= Math.sqrt(i); j++)

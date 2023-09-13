@@ -20,7 +20,7 @@ public class ex3_7 {
 
     public static void ex3_7_2(int[]used, int count){
         while (true) {
-
+//365값을 변수로 final 로 지정해서 바뀌지 않는 값을 지정해
             int birthday;
             birthday = (int)(Math.random()*365);
             count++;
@@ -34,7 +34,7 @@ public class ex3_7 {
         int falsecounter = checkBirthday(used);
 
         System.out.println("365일중 "
-                + (365 - falsecounter) + " 일은 누군가의 생일임");
+                + (364 - falsecounter) + " 일은 누군가의 생일임");
     }
 
     public static int checkBirthday(int[] used){
@@ -47,12 +47,14 @@ public class ex3_7 {
              return falsecounter;
     }
     public static void ex3_7_3(int[]used, int count){
+
         while (true) {
 
             int birthday;
             birthday = (int)(Math.random()*365);
             count++;
             used[birthday]++;
+
 
             if (checkBirthday(used) == 0) {
                 break;
@@ -68,6 +70,7 @@ while 문의 구성은 동일하나 while문이 break되기 위한 조건이 모
 해당 조건이 다르기때문에 while 문을 재사용하기 어렵다.
 내가 생각한 방법 -> 하나의 while 문에 if 문을 모두 사용한다. 그리고 if 문 각각 결과값을 찾으면 int 값을 저장한다.
 이후 모두 해당 값을 찾았다면 저장한 int 값을 각자 리턴한다.
+예외처리를 잘 해볼 수 있도록 좀더 노력해 봅시다.
  */
     public static void main(String[] args) {
         int[] used;
