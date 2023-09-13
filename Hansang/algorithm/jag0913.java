@@ -2,18 +2,32 @@ package com.Chapter2.algorithm;
 
 public class jag0913 {
 
-    public static int gcd(int a, int b){
+    public static int gcd(int number1, int number2){
         int temp = 0;
-        while(a%b != 0) {
-            temp = a % b;
-            a = b;
-            b = temp;
+        while(number1%number2 != 0) {
+            temp = number1 % number2;
+            number1 = number2;
+            number2 = temp;
         }
-        return b;
+
+        return number2;
     }
 
-    public static boolean test(int a, int b, int testCasesResult){
-        if(testCasesResult == (a*b)/gcd(a, b)){
+    public static int recursiveGcd(int number1, int number2){
+        if(number2 == 0){
+            return number1;
+        }
+
+        return recursiveGcd(number2, number1% number2);
+    }
+
+    public static boolean test(int number1, int number2, int testCasesResult){
+        if(number1 == 0 || number2 == 0){
+            if(testCasesResult == 0){
+                correct++;
+                return true;
+            }
+        } else if(testCasesResult == (number1*number2)/recursiveGcd(number1, number2)){
             correct++;
             return true;
         }
@@ -22,9 +36,9 @@ public class jag0913 {
 
     private static double correct = 0;
 
-    private static final int[][] TEST_CASES = {{1,1},{2,81},{3,7},{19,87},{1,40}};
+    private static final int[][] TEST_CASES = {{0,0},{0,6},{0,0},{1,1},{2,81},{3,7},{19,87},{1,40},{18,12},{41,55}};
 
-    private static final int[] TEST_CASES_RESULTS = {1, 162,21,1653,40};
+    private static final int[] TEST_CASES_RESULTS = {0,0,76,1, 162,21,1653,40,36,2255};
 
 
     public static void main(String[] args){
@@ -33,6 +47,6 @@ public class jag0913 {
             System.out.println("Test Case " + (i + 1) + " = " + test(TEST_CASES[i][0], TEST_CASES[i][1], TEST_CASES_RESULTS[i]));
         }
 
-        System.out.printf("정답률 = %.3f%%", (correct / TEST_CASES.length * 100));
+        System.out.printf("정답률 = %.3f%%", (((correct) / (TEST_CASES.length)) * 100));
     }
 }
