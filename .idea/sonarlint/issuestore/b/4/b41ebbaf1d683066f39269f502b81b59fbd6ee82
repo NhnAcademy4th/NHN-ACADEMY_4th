@@ -1,0 +1,8 @@
+
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŠÖÑ¿ùÿÿÿÿ8¥ı±Ï¨1
+½
+java:S1598"ŸThis file "quiz2_14.java" should be located in "com/Chapter2/Chapter2" directory, not in "/Users/hansang/IdeaProjects/github/NHN-ACADEMY_4th/Hansang/Chapter2".(ÚÆû£8¥ı±Ï¨1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÚÆû£8¥ı±Ï¨1
+L	java:S106"+Replace this use of System.out by a logger.(ñÖ„ëûÿÿÿÿ8¨ı±Ï¨1
+L	java:S106"+Replace this use of System.out by a logger.(€À­şÿÿÿÿ8¨ı±Ï¨1
+F	java:S106"+Replace this use of System.out by a logger.(ÑÛ÷J8¨ı±Ï¨1
