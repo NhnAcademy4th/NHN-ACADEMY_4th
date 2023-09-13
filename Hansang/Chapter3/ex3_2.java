@@ -3,7 +3,7 @@ package Chapter3;
 public class ex3_2 {
     public static void main(String[] args) {
         int maxNum = 10000;
-        int count = 0;
+        int count;
         int saveCount = 0;
         int saveNum =0;
 
@@ -13,6 +13,7 @@ public class ex3_2 {
             {
                 if(i % j == 0){
                     count+=2;
+                    //9의 약수는 1,3,9
                 }
             }
             if(saveCount <= count){
