@@ -1,5 +1,5 @@
 ## Quiz on Chapter2
-
+##### Sonnyson
 ### Question 1 :
 
 Briefly explain what is mean by the syntax and the semantics of a programming language. Give an example to illustrate the difference between a syntax error and a semantics error.
