@@ -13,6 +13,5 @@ public class Ex2_6 {
         System.out.printf("Your first name is %s, which has %d characters\n", firstName, firstName.length());
         System.out.printf("Your last name is %s, which has %d characters\n", lastName, lastName.length());
         System.out.printf("Your initials are %s\n", initials);
-
     }
 }
