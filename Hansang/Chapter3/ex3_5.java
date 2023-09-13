@@ -1,6 +1,4 @@
 package Chapter3;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 import textio.TextIO;
 
@@ -13,7 +11,8 @@ public class ex3_5 {
         int c =1;
         while(!TextIO.eof()) {
             String[] tempstr = TextIO.getln().split(": ");
-
+            //예외사항이 발생할 가능성이 있음
+            //가능하면 textIO 사용하지 말기바람...
             if(!Objects.equals(tempstr[c], "no report received")){
                 totalSales+= Double.parseDouble(tempstr[c]);
             }else{
