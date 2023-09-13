@@ -12,12 +12,16 @@
 
 ---
 
-=== 2023/09/12 :
+=== 2023/09/12 (화):
 
 * JavaFX Chapter 1, Chapter 2 -> Exercise(Code Review), Quiz
 * Git Organization 생성
 
-=== 2023/09/16 (토):
+=== 2023/09/13 (수):
+* JavaFX Chapter 3 -> Exercise(Code Review), Quiz
+* Exercise(Code Review) 코드 수정
+
+=== 2023/09/16 (토) :
 
 * Goal : ~ JavaFx Chapter 7
 
