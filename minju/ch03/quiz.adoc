@@ -1,0 +1,180 @@
+=== 3장 퀴즈
+:hardbreaks:
+
+==== Q1. What is an algorithm?
+    A1. 
+    어떤 작업을 수행하기 위한 절차이다.
+
+
+==== Q2. Explain briefly what is meant by "pseudocode" and how is it useful in the development of algorithms.
+    A2.
+    pseudocode는 알고리즘의 논리를 프로그래밍 언어를 모방하여 작성한 설명이다. 
+    해결해야되는 문제에 대해 쉽게 이해할 수 있고, 구조를 잘 정립해서 개발할 수 있다.
+
+==== Q3. What is a block statement? How are block statements used in Java programs?
+    A3. 
+    Java의 block statement는 여러 명령문들을 하나의 블록으로 묶는데 사용된다.
+    java에서는 if문에서 () 속 조건이 true면 {과 } 사이의 statement을 실행하는 식으로 사용한다.
+
+==== Q4. What is the main difference between a while loop and a do..while loop?
+    A4.
+    while 문은 break 조건을 body를 실행하기 전에 테스트하고, do..while 문은 break 조건으로 body를 실행하고 break 조건을 테스트해서 최소 한번은 실행한다.
+
+==== Q5. What does it mean to prime a loop?
+    A5.
+    loop의 테스트 문이 body가 실행되기 전에도 의미있도록 하는 것을 의미한다.
+
+==== Q6. Explain what is meant by an animation and how a computer displays an animation.
+    A6.
+    이미지들을 연속적으로 보여주는 것이다.
+    컴퓨터는 매우 빠른 속도로 이미지들을 보여줘서 동영상으로 보이게 한다.
+
+==== Q7. Write a for loop that will print out all the multiples of 3 from 3 to 36, that is: 3 6 9 12 15 18 21 24 27 30 33 36.
+    A7.
+[source,java]
+----
+    public class test {
+        public static void main(String[] args) {
+            for (int i = 1; i <= 36 / 3; i++) {
+                System.out.print(3 * i + " ");
+            }
+        }
+    }
+----
+
+==== Q8. Fill in the following main() routine so that it will ask the user to enter an integer, read the user's response, and tell the user whether the number entered is even or odd. (You can use TextIO.getInt() to read the integer. Recall that an integer n is even if n % 2 == 0.)
+
+    A8.
+[source,java]
+----
+    public static void main(String[] args) {
+        int number = TextIO.getInt();
+        if (number % 2 == 0)
+            System.out.println("짝수");
+        else
+            System.out.println("홀수");
+    }
+----
+
+==== Q9. Write a code segment that will print out two different random integers selected from the range 1 to 10. All possible outputs should have the same probability. Hint: You can easily select two random numbers, but you have to account for the fact that the two numbers that you pick might be the same.
+
+    A9.
+[source, java]
+----
+int number1, number2;
+
+        do {
+            number1 = (int) (Math.random() * 10) + 1;
+            number2 = (int) (Math.random() * 10) + 1;
+        } while (number1 == number2);
+----
+
+==== Q10. Suppose that s1 and s2 are variables of type String, whose values are expected to be string representations of values of type int. Write a code segment that will compute and print the integer sum of those values, or will print an error message if the values cannot successfully be converted into integers. (Use a try..catch statement.)
+
+    A10.
+[source, java]
+----
+        try {
+            int number1 = Integer.parseInt(s1);
+            int number2 = Integer.parseInt(s2);
+            int sum = number1 + number2;
+        } catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
+        }
+----
+
+==== Q11. Show the exact output that would be produced by the following main() routine:
+[source, java]
+----
+public static void main(String[] args) {
+    int N;
+    N = 1;
+    while (N <= 32) {
+       N = 2 * N;
+       System.out.println(N);   
+    }
+}
+----
+
+    A11.
+    2
+    4
+    8
+    16
+    32
+    64
+
+==== Q12. Show the exact output produced by the following main() routine:
+[source, java]
+----
+public static void main(String[] args) {
+   int x,y;
+   x = 5;
+   y = 1;
+   while (x > 0) {
+      x = x - 1;
+      y = y * x;
+      System.out.println(y);
+   }
+}
+----
+    A12.
+    4
+    12
+    24
+    24
+    0
+
+==== Q13. What output is produced by the following program segment? *Why?* (Recall that name.charAt(i) is the i-th character in the string, name.)
+[source, java]
+----
+String name;
+int i;
+boolean startWord;
+
+name = "Richard M. Nixon";
+startWord = true;
+for (i = 0; i < name.length(); i++) {
+   if (startWord)
+      System.out.println(name.charAt(i));
+   if (name.charAt(i) == ' ')
+      startWord = true;
+   else
+      startWord = false;
+}
+----
+    A13.
+    R
+    M
+    N
+    문자는 startWord 변수가 true일 때만 출력된다. startWord는 반복문이 시작되기 전 true로 초기화되어 문자열의 첫 번째 글자가 출력된다. 첫 글자 출력 이후로 공백문자가 나올때까지 startWord는 false가 된다. 출력은 공백 다음 문자들만 출력된다.
+
+==== Q14. Suppose that numbers is an array of type int[]. Write a code segment that will count and output the number of times that the number 42 occurs in the array.
+
+    A14.
+[source, java]
+----
+        int count;
+        for(int number : numbers) {
+            if(number == 42) {
+                 count++;
+            }
+        }
+----
+
+==== Q15.Define the range of an array of numbers to be the maximum value in the array minus the minimum value. Suppose that raceTimes is an array of type double[]. Write a code segment that will find and print the range of raceTimes.
+    A15.
+[source, java]
+----
+        int max = raceTimes[0];
+        int min = raceTimes[0];
+
+        if(int i = 1; i < raceTimes.length; i++) {
+            if(max < raceTimes[i])
+                max = raceTimes[i];
+            if(min > raceTimes[i])
+                min = raceTimes[i];
+        }
+
+        int range = max - min;
+----

@@ -13,3 +13,9 @@ M
 chapter2/example/testdata.txt,1/2/127ad4f2d107e0c9f1516f448c1a85d3742ffb8b
 K
 chapter2/example/Ex2_7.java,1/7/17a29890cf7705bad806270bf188f6f3976b0a08
+@
+chapter2/quiz.md,a/f/afc513558327b72279bbf0baebcb9b3faee82d76
+@
+chapter3/quiz.md,d/a/da7fc0ceb0fafaeae7d91ca595663d684d5f2805
+K
+chapter3/example/Ex3_1.java,2/0/20da8354fea50191b239f6bab63116e8ce2b1a04
