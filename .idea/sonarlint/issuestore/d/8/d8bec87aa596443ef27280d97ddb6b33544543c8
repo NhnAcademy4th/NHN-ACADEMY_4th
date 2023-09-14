@@ -1,11 +1,0 @@
-
-n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ã±»Äþÿÿÿÿ8Î“Ïá¨1
-¿
-java:S1598"œThis file "ex3_1.java" should be located in "com/Chapter2/Chapter3" directory, not in "/Users/hansang/IdeaProjects/github/NHN-ACADEMY_4th/Hansang/Chapter3".(»â¦Õþÿÿÿÿ8Ï“Ïá¨1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»â¦Õþÿÿÿÿ8Ï“Ïá¨1
-G
-java:S1481"*Remove this unused "count" local variable.(æÕ¿¼8Ò“Ïá¨1
-K
-java:S2140")Use "java.util.Random.nextInt()" instead.(®¡»£þÿÿÿÿ8Ò“Ïá¨1
-K
-java:S2140")Use "java.util.Random.nextInt()" instead.(¾¶‡¸ûÿÿÿÿ8Ò“Ïá¨1
