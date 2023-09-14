@@ -1,0 +1,53 @@
+Q1What is an algorithm?
+알고리즘이란 특정한 임무를 수행하기 위한 아이디어를 구체화한 것입니다. 
+
+Q2Explain briefly what is meant by "pseudocode" and how is it useful in the development of algorithms.
+pseudocode란 본격적으로 프로그래밍 코드를 적기전 머리속에 있는 문제해결 절차를 적는것이다.
+이렇게 문제 해결절차를 적고 해당하는 절차별로 하나씩 나누어 생각하면 문제를 해결 할 수 있는 알고리즘이 만들어진다.
+
+Q3What is a block statement? How are block statements used in Java programs?
+block statement는 일반적으로 문장의 위, 아래 존재하는 한쌍의 중괄호를 통해생성된다. 자바프로그램에서는 block statement를 하나의
+장벽으로 활용할 수 있다. block statement내부에 선언된 문장들은 외부에서 접근할 수 없기 때문이다.
+
+Q4What is the main difference between a while loop and a do..while loop?
+두 루프문의 가장 큰 차이점은 조건 검사시기에 있다. while의 경우 조건문이 true일때 해당 루프문이 작동하지만,
+do while문의 경우 일단 루프문을 돌리고 나서 while의 조건식을 검사하기 때문이다.
+
+Q5What does it mean to prime a loop?
+loop문은 조건식의 참과 거짓을 판별하여 작동한다. 그러나 참과 거짓을 판별하기 위해서는 while의 조건문에 들어갈 조건식, boolean값을 준비해야한다.
+이것을 prime a loop라고 부른다.
+
+
+Q6Explain what is meant by an animation and how a computer displays an animation.
+animation이란 연속적인 이미지의 나열이다. 컴퓨터는 프레임이라고 부르는 그림판을 일정한 주기마다 다음 예정된 프레임으로 바꿈으로써
+animation을 보여준다.
+
+
+Q7Write a for loop that will print out all the multiples of 3 from 3 to 36, that is: 3 6 9 12 15 18 21 24 27 30 33 36.
+Chapter3폴더에 생성함
+
+Q8Fill in the following main() routine so that it will ask the user to enter an integer, read the user's response, and tell the user whether the number entered is even or odd. (You can use TextIO.getInt() to read the integer. Recall that an integer n is even if n % 2 == 0.)
+Chapter3폴더에 생성함
+
+Q9Write a code segment that will print out two different random integers selected from the range 1 to 10. All possible outputs should have the same probability. Hint: You can easily select two random numbers, but you have to account for the fact that the two numbers that you pick might be the same.
+chapter3폴더에 생성함
+
+Q10Suppose that s1 and s2 are variables of type String, whose values are expected to be string representations of values of type int. Write a code segment that will compute and print the integer sum of those values, or will print an error message if the values cannot successfully be converted into integers. (Use a try..catch statement.)
+chapter3폴더에 생성함
+
+Q11Show the exact output that would be produced by the following main() routine:
+2, 4, 8, 16, 32, 64
+
+Q12Show the exact output produced by the following main() routine:
+4, 12, 24, 24, 0
+
+Q13What output is produced by the following program segment? Why? (Recall that name.charAt(i) is the i-th character in the string, name.)
+R, M, N이다 왜냐하면 먼저 for문이 실행되기 이전에 starWord변수를 true로 해줌으로써 첫번째 if의 조건을 만족했고 Richard의 R이 프린트 함수에 들어갔다.
+이후 공백문자가 나올때마다 starWord변수를 true로 지정해주고 그렇지 않으면 false로 지정해주어 공백이후에 오는 문자만 프린트함수에 집어넣은 것이다.
+결과적으로 R M N이 출력된다.
+
+Q14Suppose that numbers is an array of type int[]. Write a code segment that will count and output the number of times that the number 42 occurs in the array.
+Chapter3폴더에 생성함
+
+Q15Define the range of an array of numbers to be the maximum value in the array minus the minimum value. Suppose that raceTimes is an array of type double[]. Write a code segment that will find and print the range of raceTimes.
+Chapter3폴더에 생성함

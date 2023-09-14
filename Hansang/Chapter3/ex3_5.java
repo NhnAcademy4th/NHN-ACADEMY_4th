@@ -4,7 +4,12 @@ import textio.TextIO;
 
 public class ex3_5 {
     public static void main(String[] args) {
-        TextIO.readFile("./src/main/java/Chapter3/sales.dat");
+
+        try {
+            TextIO.readFile("./src/main/java/Chapter3/sales.dat");
+        }catch (Exception e){
+            throw new IllegalArgumentException("Can not find file!");
+        }
 
         double totalSales = 0;
         int noDatacount =0;
