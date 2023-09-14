@@ -6,5 +6,6 @@
     "SonnySon/exercise/src",
     "Hansang",
     "minju/ch03"
-  ]
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
 }
