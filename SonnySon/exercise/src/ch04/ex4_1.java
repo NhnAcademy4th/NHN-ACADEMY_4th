@@ -24,21 +24,19 @@ public class ex4_1 {
         StringTokenizer st = new StringTokenizer(line);
         StringBuilder result = new StringBuilder();
 
-        boolean foundFirstLetter = false;
+        boolean isFoundFirstLetter = false;
 
         while (st.hasMoreTokens()) {
             for (char c : st.nextToken().toCharArray()) {
-                if (Character.isLetter(c)) {
-                    if (!foundFirstLetter) {
+                if (Character.isLetter(c) == isFoundFirstLetter) {
                         result.append(Character.toUpperCase(c));
-                        foundFirstLetter = true;
-                    } else result.append(c);
+                        isFoundFirstLetter = true;
                 } else {
                     result.append(c);
                 }
             }
             result.append(" ");
-            foundFirstLetter = false;
+            isFoundFirstLetter = false;
         }
         return result.toString();
     }

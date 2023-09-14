@@ -15,8 +15,14 @@ public class ex4_2 {
         if (!Pattern.matches(PATTERN, str)) {
             return -1;
         }
-        long result = 0;
 
+        return H2D(str);
+
+    }
+
+    private static long H2D(String str){
+
+        long result = 0;
         int lengthOfNum = str.length() - 1;
 
         for (char c : str.toCharArray()) {
@@ -45,7 +51,6 @@ public class ex4_2 {
             }
             lengthOfNum--;
         }
-
         return result;
     }
 
