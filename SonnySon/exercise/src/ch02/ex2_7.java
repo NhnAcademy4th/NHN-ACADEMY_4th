@@ -9,7 +9,6 @@ public class ex2_7 {
 
         FileReader reader = new FileReader(
                 "src/main/java/com/example/ch02/testdata.txt");
-        // src/main/java/com/example/ch02/testdata.txt
 
         Scanner sc = new Scanner(reader);
         String name = sc.nextLine();

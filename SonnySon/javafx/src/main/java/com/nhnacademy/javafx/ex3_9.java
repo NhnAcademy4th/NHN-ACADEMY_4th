@@ -83,8 +83,6 @@ public class ex3_9 extends Application {
                 g.fillRect(100, 250, 50, 50);
         }
 
-
-
     }
 
     //------ Implementation details: DO NOT EXPECT TO UNDERSTAND THIS ------
