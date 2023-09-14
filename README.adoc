@@ -3,7 +3,7 @@
 == 4기 8조 studyGroup
 
 * Member : 
-https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/SonnySon/exercise/src[손병민], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/Hansang[이한상], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/jiwon[홍지원], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/jaehun[최재훈], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/minju[김민주]
+https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[손병민], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/Hansang[이한상], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jiwon[홍지원], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jaehun[최재훈], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/minju[김민주] -> 링크는 develop 이며, 매주 일요일 12시 배포
 
 
 * **__하루에 Chapter 1개씩 끝내는것을 목표__**
@@ -11,8 +11,19 @@ https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/SonnySon/exercise/src
 * 코드리뷰는 매일 16:00 진행
 * 수업시간엔 Exercise를 풀고(~16:00), Chapter에 관한 내용은 수업이 아닌 시간에 개인적으로 공부
 
+== 중요!!
+
 **PR은 세명 이상이 확인을 해줘야 합니다!!!!!**
 
+1. PR 전 브랜치명은 [본인의성]_챕터.0-9 입니다. 
+
+** 예) 손병민 ch01 처음 PR -> SON_1.0 +
+*** EXERCISE PR 올려서 PUSH 끝났는데 QUIZ 브랜치명은 뭘로함? -> SON_1.1
+*** 난 안끝났는데? -> SON_1.0 commit
+
+__**주말동안 자신의 목표 checkList main .ADOC에 적어주세요**__
+
+---
 
 === Table of Contents:
 
