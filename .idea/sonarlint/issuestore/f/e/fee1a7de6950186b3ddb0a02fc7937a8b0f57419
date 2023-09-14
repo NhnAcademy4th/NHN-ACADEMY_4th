@@ -1,8 +1,0 @@
-
-7
-java:S1643"Use a StringBuilder instead.(ÛÜëùÿÿÿÿ
-g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(“™óÌûÿÿÿÿ
-W
-java:S4973"<Strings and Boxed types should be compared using "equals()".(æåè‰ıÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šı³¹úÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(ì­øúÿÿÿÿ

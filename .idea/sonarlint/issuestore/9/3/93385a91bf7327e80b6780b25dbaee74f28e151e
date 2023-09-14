@@ -1,8 +1,0 @@
-
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(çéðõ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ôðôöùÿÿÿÿ
-`
-java:S2095
-"EUse try-with-resources or close this "Scanner" in a "finally" clause.(¸¸Âíþÿÿÿÿ
-@	java:S106"+Replace this use of System.out by a logger.(î¦¯ï
-E	java:S106"+Replace this use of System.out by a logger.(ï›ï”þÿÿÿÿ
