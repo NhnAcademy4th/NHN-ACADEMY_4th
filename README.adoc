@@ -16,7 +16,7 @@
 * [*] Chapter 1: Overview: The Mental Landscape
 * [*] Chapter 2: Programming in the Small I: Names and Things
 * [*] Chapter 3: Programming in the Small II: Control
-* [ ] Chapter 4: Programming in the Large I: Subroutines
+* [*] Chapter 4: Programming in the Large I: Subroutines
 * [ ] Chapter 5: Programming in the Large II: Objects and Classes
 * [ ] Chapter 6: Introduction to GUI Programming
 * [ ] Chapter 7: Arrays, ArrayLists, and Records
@@ -39,10 +39,10 @@
 === 2023/09/13 (수):
 * [*] JavaFX Chapter 3 -> Exercise(Code Review), Quiz
 
----
-
 === 2023/09/13 (목):
-* [ ] JavaFX Chapter 4 -> Exercise(Code Review), Quiz
+* [*] JavaFX Chapter 4 -> Exercise(Code Review), Quiz
+
+---
 
 === 2023/09/13 (금):
 * [ ] JavaFX Chapter 5 -> Exercise(Code Review), Quiz
