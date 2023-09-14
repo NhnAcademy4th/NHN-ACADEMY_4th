@@ -27,3 +27,9 @@ L
 src/ch04/ArrayProcessor.java,9/d/9d639daef1440a9436346147680222e70f2e098e
 C
 src/ch04/ex4_5.java,f/2/f2e821d33dab1c1880285f40e7efa7691c99f0cd
+C
+src/ch04/ex4_8.java,f/f/ff1075131a3510268c260c41374bb42dd3b204e6
+C
+src/ch04/print.java,0/c/0c8768822e15a3765ad1e55329f13ac52ea972ac
+B
+src/ch04/Quiz.adoc,4/e/4eadaad77f2bf9bddd0a046caf661c58b9250cc1
