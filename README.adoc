@@ -11,6 +11,23 @@
 * 코드리뷰는 매일 16:00 진행
 * 수업시간엔 Exercise를 풀고(~16:00), Chapter에 관한 내용은 수업이 아닌 시간에 개인적으로 공부
 
+=== Table of Contents:
+
+* [*] Chapter 1: Overview: The Mental Landscape
+* [*] Chapter 2: Programming in the Small I: Names and Things
+* [*] Chapter 3: Programming in the Small II: Control
+* [ ] Chapter 4: Programming in the Large I: Subroutines
+* [ ] Chapter 5: Programming in the Large II: Objects and Classes
+* [ ] Chapter 6: Introduction to GUI Programming
+* [ ] Chapter 7: Arrays, ArrayLists, and Records
+* [ ] Chapter 8: Correctness, Robustness, Efficiency
+* [ ] Chapter 9: Linked Data Structures and Recursion
+* [ ] Chapter 10: Generic Programming and Collection Classes
+* [ ] Chapter 11: Input/Output Streams, Files, and Networking
+* [ ] Chapter 12: Threads and Multiprocessing
+* [ ] Chapter 13: GUI Programming Continued
+* [ ] Source Code for All Examples in this Book
+* [ ] Glossary
 
 ---
 
