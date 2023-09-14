@@ -1,5 +1,7 @@
 package com.nhnacademy.javafx;
 
+import javafx.scene.paint.Color;
+
 /**
  * This program opens a window full of randomly colored squares.  A "disturbance"
  * moves randomly around in the window, randomly changing the color of each
@@ -14,6 +16,7 @@ public class ex4_7 {
     static int currentRow;    // Row currently containing the disturbance.
     static int currentColumn; // Column currently containing disturbance.
 
+    static Color color;
     /**
      * The main program creates the window, fills it with random colors,
      * and then moves the disturbances in a random walk around the window
@@ -22,10 +25,14 @@ public class ex4_7 {
     public static void main(String[] args) {
         Mosaic.open( ROWS, COLUMNS, SQUARE_SIZE, SQUARE_SIZE );
         fillWithRandomColors();
-        currentRow = ROWS / 2;   // start at center of window
-        currentColumn = COLUMNS / 2;
+
+        currentRow = (int)(Math.random()*ROWS);
+        currentColumn = (int)(Math.random()*ROWS);
+
+        color = Mosaic.getColor(currentRow,currentColumn);
+
         while (true) {
-            changeToRandomColor(currentRow, currentColumn);
+            changeToSameColor(currentRow, currentColumn);
             randomMove();
             Mosaic.delay(5);
         }
@@ -62,6 +69,10 @@ public class ex4_7 {
         Mosaic.setColor(rowNum,colNum,red,green,blue);
     }  // end changeToRandomColor
 
+    static void changeToSameColor(int rowNum, int colNum) {
+
+        Mosaic.setColor(rowNum,colNum,color);
+    }
     /**
      * Move the disturbance.
      * Precondition:   The global variables currentRow and currentColumn
