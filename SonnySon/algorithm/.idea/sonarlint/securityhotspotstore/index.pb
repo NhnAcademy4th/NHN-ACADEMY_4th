@@ -15,3 +15,7 @@ U
 %src/main/java/algorithm/PrimeDiv.java,b/2/b2a6e1539d1925a063dd908cf64e5d4c6706d774
 U
 %src/main/java/algorithm/bigPrime.java,4/5/4596794d19e28a5341c8a97b8ca7accf9e818bb2
+T
+$src/main/java/algorithm/gcdTest.java,8/7/876392cf6cb87e3c65165cf26473604de66f9169
+U
+%src/main/java/algorithm/Fraction.java,5/9/592b17e7fcba9f05ee06d7c57f93dd27c8cb230e

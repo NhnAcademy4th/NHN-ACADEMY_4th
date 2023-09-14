@@ -13,8 +13,6 @@ K
 Hansang/Chapter2/ex2_6.java,c/2/c2182842c81be2325b9bc19212cf0233edb7cf3e
 I
 Hansang/Chapter2/note.txt,2/c/2cef232bb190b216935ade2d07b5121d8319583e
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 R
 "jaehun/chapter2/example/Ex2_7.java,8/3/83540ac31786ed5ad412be00ad1b5983f8481e4e
 K
