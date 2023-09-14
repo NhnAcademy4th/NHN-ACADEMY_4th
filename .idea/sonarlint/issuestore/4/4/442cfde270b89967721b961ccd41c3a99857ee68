@@ -1,0 +1,74 @@
+
+r
+java:S1192­"VDefine a constant instead of duplicating this literal "Integer in the range " 3 times.(æşóÇüÿÿÿÿ
+v
+java:S1192í"ZDefine a constant instead of duplicating this literal "Real number in the range " 6 times.(–‡•Æıÿÿÿÿ
+`
+java:S1192ª"IDefine a constant instead of duplicating this literal "(Error :" 4 times.(–‚Óµ
+s
+java:S1192ª"\Define a constant instead of duplicating this literal "Error while writing output." 6 times.(İ¢Áæ
+o
+java:S1192©"SDefine a constant instead of duplicating this literal "Can't open file \"" 4 times.(÷†ÿÿÿÿÿÿ
+t	java:S135æ"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135é"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135Ğ"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135©"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+x
+java:S4165Ú"aRemove this useless assignment; "ans" already holds the assigned value along all execution paths.(ø—ú
+d
+java:S1845Œ"MRename method "eoln" to prevent any misunderstanding/clash with field "EOLN".(òÁ»
+b
+java:S1845—"KRename method "eof" to prevent any misunderstanding/clash with field "EOF".(¾şãÙ
+v
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ÒóÓ
+{
+java:S1149´"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ë§ñ„øÿÿÿÿ
+U
+java:S1118B":Add a private constructor to hide the implicit public one.(Äş¢†ıÿÿÿÿ
+`
+java:S1124V"EReorder the modifiers to comply with the Java Language Specification.(ıÀõœÿÿÿÿÿ
+`
+java:S1124\"EReorder the modifiers to comply with the Java Language Specification.(Ö·âÒúÿÿÿÿ
+>	java:S108i")Either remove or fill this block of code.(”ı¾
+r
+java:S6201‰"VReplace this instanceof check and cast with 'instanceof BufferedReader bufferedreader'(ªŠœ×úÿÿÿÿ
+?	java:S108¯")Either remove or fill this block of code.(”ı¾
+?	java:S108å")Either remove or fill this block of code.(”ı¾
+?	java:S108û")Either remove or fill this block of code.(”ı¾
+?	java:S108Å")Either remove or fill this block of code.(”ı¾
+?	java:S108€")Either remove or fill this block of code.(”ı¾
+]
+java:S3457Ã"AFormat specifiers should be used instead of string concatenation.(Õôíèûÿÿÿÿ
+\
+java:S1124î"EReorder the modifiers to comply with the Java Language Specification.(ÿŠƒï
+a
+java:S1124ò"EReorder the modifiers to comply with the Java Language Specification.(¦¦›øüÿÿÿÿ
+F	java:S106ò"+Replace this use of System.out by a logger.(¦¦›øüÿÿÿÿ
+\
+java:S1124‚"EReorder the modifiers to comply with the Java Language Specification.(÷±ÛÜ
+G
+java:S6035‚"0Replace this alternation with a character class.(÷±ÛÜ
+S
+java:S6353‚"<Use concise character class syntax '\\d' instead of '[0-9]'.(÷±ÛÜ
+a
+java:S1124ƒ"EReorder the modifiers to comply with the Java Language Specification.(œÈ…üÿÿÿÿ
+G
+java:S6035„"0Replace this alternation with a character class.(ğÜÿ¬
+G
+java:S6035„"0Replace this alternation with a character class.(ğÜÿ¬
+G
+java:S6035„"0Replace this alternation with a character class.(ğÜÿ¬
+S
+java:S6353„"<Use concise character class syntax '\\d' instead of '[0-9]'.(ğÜÿ¬
+S
+java:S6353„"<Use concise character class syntax '\\d' instead of '[0-9]'.(ğÜÿ¬
+S
+java:S6353„"<Use concise character class syntax '\\d' instead of '[0-9]'.(ğÜÿ¬
+S
+java:S6353„"<Use concise character class syntax '\\d' instead of '[0-9]'.(ğÜÿ¬
+`
+java:S1858¯"D"s" is already a string, there's no need to call "toString()" on it.(«ô¸Úúÿÿÿÿ
+F	java:S106	"+Replace this use of System.err by a logger.(“‚®Åøÿÿÿÿ
+k
+java:S5843„"TSimplify this regular expression to reduce its complexity from 27 to the 20 allowed.(ğÜÿ¬

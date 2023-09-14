@@ -12,8 +12,9 @@ public class ex3_2 {
             for(int j = 1; j <= Math.sqrt(i); j++)
             {
                 if(i % j == 0){
-                    count+=2;
-                    //9의 약수는 1,3,9
+                    count++;
+                    if(i / j != j)
+                        count++;
                 }
             }
             if(saveCount <= count){
