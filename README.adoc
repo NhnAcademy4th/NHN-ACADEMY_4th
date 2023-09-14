@@ -2,7 +2,8 @@
 
 == 4기 8조 studyGroup
 
-*Member : 손병민, 이한상, 홍지원, 최재훈, 김민주*
+* Member : 
+https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/SonnySon/exercise/src[손병민], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/Hansang[이한상], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/jiwon[홍지원], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/jaehun[최재훈], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/main/minju[김민주]
 
 
 * **__하루에 Chapter 1개씩 끝내는것을 목표__**
@@ -43,11 +44,14 @@
 
 === 2023/09/13 (목):
 * [*] JavaFX Chapter 4 -> Exercise(Code Review), Quiz
-      
+
+팀회의
+
 1. 레포지토리 어떻게 할건지 이야기했음 
-2. 자바 fx프로젝트를 따로 파서 레포지토리 두개로 운영 FXproject, Exercise Project
+2. 깃허브 연습을 위해 FXproject는 공유 프로젝트로 진행 -> 레포지토리 따로파기로함
 3. 하루에 한챕터씩 밀다보니 인원들이 시간이 부족하다는 이야기 나옴 -> 일요일 복습에서 토, 일 복습으로 변경
 4. FX가 정말 필요한가? 필요성을 못느끼겠음 -> 그래도 해라
+5. .gitignore 설정
 
   Member 홍지원 1과정으로 "branch" 
 
