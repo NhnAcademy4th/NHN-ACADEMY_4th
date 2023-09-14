@@ -1,0 +1,24 @@
+
+i	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ç© ş8£è©‘©1
+D
+java:S2189"""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8¨è©‘©1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.( Öü8©è©‘©1
+a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(³‚Ş8©è©‘©1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(˜€ûıÿÿÿÿ8©è©‘©1
+E
+java:S2140")Use "java.util.Random.nextInt()" instead.(§ïÅS8ªè©‘©1
+K
+java:S2140")Use "java.util.Random.nextInt()" instead.(êæíúÿÿÿÿ8ªè©‘©1
+K
+java:S2140B")Use "java.util.Random.nextInt()" instead.(àÁ¾üÿÿÿÿ8«è©‘©1
+F
+java:S2140C")Use "java.util.Random.nextInt()" instead.(Ì•Øğ8«è©‘©1
+K
+java:S2140D")Use "java.util.Random.nextInt()" instead.(’¯Õóşÿÿÿÿ8«è©‘©1
+K
+java:S2140X")Use "java.util.Random.nextInt()" instead.(ÓÓÆœüÿÿÿÿ8¬è©‘©1
+C	java:S131Y""Add a default case to this switch.(¸é€­şÿÿÿÿ8¬è©‘©1
