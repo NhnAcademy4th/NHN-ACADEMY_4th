@@ -38,6 +38,7 @@ public class ex4_5 {
         System.out.println(minValue.apply(arr));
         System.out.println(sumValue.apply(arr));
         System.out.println(averValue.apply(arr));
+
     }
 
 }
