@@ -29,8 +29,11 @@ public class ex3_6 {
             for(int j = 1; j <= Math.sqrt(i); j++)
             {
                 if(i % j == 0){
-                    count+=2;
+                    count++;
+                    if(i / j != j)
+                        count++;
                     }
+
             }
             if(saveCount <= count){
                 saveCount = count;
