@@ -9,9 +9,6 @@ public class Dice {
     }
 
     public void roll() {
-//        for (int dice : this.dices) {
-//            dice = (int) (Math.random() * MAX_DICE_EYE) + 1;
-//        }
         for(int i=0; i<this.dices.length; i++){
             dices[i]=(int) (Math.random() * MAX_DICE_EYE) + 1;
         }

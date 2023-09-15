@@ -1,5 +1,6 @@
 package chapter5.ex5_2;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -11,8 +12,8 @@ public class Main {
 
             try{
                 number = inputFromShell();
-            }catch(NumberFormatException e){
-                System.out.println("실수를 입력해주세요.");
+            }catch(InputMismatchException e){
+                System.out.println("실수로 입력해주세요.");
                 continue;
             }
 

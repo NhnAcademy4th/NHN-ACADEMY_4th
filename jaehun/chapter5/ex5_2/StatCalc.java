@@ -1,6 +1,5 @@
 package chapter5.ex5_2;
 
-// throw 던지는 부분들에서 올바르게 판단 안되는 것을 확인했는데 범위를 넘어선 값이들어오는지 확인을 어떻게 해야할까요?
 public class StatCalc {
 
     private int count;
