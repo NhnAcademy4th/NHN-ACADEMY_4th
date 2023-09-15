@@ -1,0 +1,61 @@
+=== 4장 퀴즈
+
+==== Q1. A "black box" has an interface and an implementation. Explain what is meant by the terms interface and implementation.
+    A1.
+    블랙박스의 인터페이스는 외부에서 볼 수 있는 부분이고, interface는 내부의 코드를 의미한다.
+
+==== Q2. A subroutine is said to have a contract. What is meant by the contract of a subroutine? When you want to use a subroutine, why is it important to understand its contract? The contract has both "syntactic" and "semantic" aspects. What is the syntactic aspect? What is the semantic aspect?
+    A2. 
+    contract는 subroutine을 호출하기 위해 해야하는 일과 호출할 때 해야하는 일을 명시하는 것이다.
+    syntatctic aspect - subroutine 이름, 변수 수, 변수 유형
+    semantic aspect = 제약 조건, 의미를 구성하는 요소들은 주석으로 표현
+
+==== Q3. Briefly explain how subroutines can be useful in the top-down design of programs.
+     A3. 
+     subroutine을 작게 설계해서 개발하는 식으로 활용할 수 있다.
+
+==== Q4. Discuss the concept of parameters. What are parameters for? What is the difference between formal parameters and actual parameters?
+    A4. 
+    매개변수는 subroutine과 subroutine을 호출하는 사이의 통신을 담당한다.
+    formal parameter은 subroutine 정의에 있고, actual parameter은 subroutine 호출문에 있는 parameter을 의미한다.
+    
+
+==== Q5. Give two different reasons for using named constants (declared with the final modifier).
+
+==== Q6. What is an API? Give an example.
+
+==== Q7. What might the following expression mean in a program?
+
+==== Q8. Suppose that SupplyInt is a functional interface that defines the method public int get(). Write a lambda expression of type SupplyInt that gets a random integer in the range 1 to 6 inclusive. Write another lambda expression of type SupplyInt that gets an int by asking the user to enter an integer and then returning the user's response.
+
+==== Q9. Write a subroutine named "stars" that will output a line of stars to standard output. (A star is the character "*".) The number of stars should be given as a parameter to the subroutine. Use a for loop. For example, the command "stars(20)" would output
+
+==== Q10. Write a main() routine that uses the subroutine that you wrote for Question 7 to output 10 lines of stars with 1 star in the first line, 2 stars in the second line, and so on, as shown below.
+
+==== Q11. Write a function named countChars that has a String and a char as parameters. The function should count the number of times the character occurs in the string, and it should return the result as the value of the function.
+
+==== Q12. Write a subroutine with three parameters of type int. The subroutine should determine which of its parameters is smallest. The value of the smallest parameter should be returned as the value of the subroutine.
+
+==== Q13. Write a function that finds the average of the first N elements of an array of type double. The array and N are parameters to the subroutine.
+
+==== Q14. Explain the purpose of the following function, and explain how it works:
+[source, java]
+----
+static int[] stripZeros( int[] list ) {
+    int count = 0;
+    for (int i = 0; i < list.length; i++) {
+        if ( list[i] != 0 )
+            count++;
+    }
+    int[] newList;
+    newList = new int[count];
+    int j = 0;
+    for (int i = 0; i < list.length; i++) {
+        if ( list[i] != 0 ) {
+            newList[j] = list[i];
+            j++;
+        }
+    }
+    return newList;
+}
+----
