@@ -1,0 +1,8 @@
+.idea
+.idea/sonarlint/issuestore
+.idea/sonarlint/securityhotspotstore/index.pb
+.idea/sonarlint/issuestore/a/8/a8477b3177d3d3bd3811a4b421034a6897c3b3cc
+*.iws
+*.iml
+*.ipr
+/out
