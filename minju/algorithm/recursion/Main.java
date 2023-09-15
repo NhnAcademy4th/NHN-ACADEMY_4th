@@ -48,11 +48,13 @@ public class Main {
 
     private static final int[] FIBONACCI_TEST_CASES = {
             0,
+            2,
             10
     };
 
     private static final int[] FIBONACCI_TEST_CASE_RESULTS = {
             0,
+            1,
             55
     };
 
@@ -71,9 +73,10 @@ public class Main {
             case 0:
                 return 0;
             case 1:
+            case 2:
                 return 1;
             default:
-                return number + fibonacci(number - 1);
+                return fibonacci(number - 1) + fibonacci(number - 2);
         }
     }
 }
