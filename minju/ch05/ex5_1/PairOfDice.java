@@ -13,8 +13,8 @@ public class PairOfDice {
         return die1.getDiceEye() + die2.getDiceEye();
     }
 
-    public int getMax() {
-        return maxDiceEye;
+    public int getMaxSum() {
+        return maxDiceEye + maxDiceEye;
     }
 
     @Override

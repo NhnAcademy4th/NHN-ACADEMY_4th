@@ -15,17 +15,27 @@ public class StatCalc {
             throw new ArithmeticException("더이상 추가할 수 없습니다.");
         }
 
+        sum(num);
+        max(num);
+        min(num);
+
+    }
+
+    private void sum(double num) {
         sum += num;
         squareSum += num * num;
+    }
 
+    private void max(double num) {
         if (max < num) {
             max = num;
         }
+    }
 
+    private void min(double num) {
         if (min > num) {
             min = num;
         }
-
     }
 
     public double getMax() {
