@@ -1,4 +1,5 @@
-package chapter3.example;
+package course2.chapter3.example;
+
 
 public class Ex3_7 {
     public static void main(String[] args) {

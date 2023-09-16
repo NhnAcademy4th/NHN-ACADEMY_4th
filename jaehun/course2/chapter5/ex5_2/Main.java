@@ -1,4 +1,4 @@
-package chapter5.ex5_2;
+package course2.chapter5.ex5_2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

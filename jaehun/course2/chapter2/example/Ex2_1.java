@@ -1,4 +1,4 @@
-package chapter2.example;
+package course2.chapter2.example;
 // Write a program that will print your initials to standard output in letters
 
 // that are nine lines tall. Each big letter should be made up of a bunch of

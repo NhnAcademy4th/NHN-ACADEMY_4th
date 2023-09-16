@@ -1,4 +1,4 @@
-package chapter4.example;
+package course2.chapter4;
 
 import java.util.Arrays;
 

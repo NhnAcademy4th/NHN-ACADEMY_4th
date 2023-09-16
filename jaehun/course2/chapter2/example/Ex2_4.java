@@ -1,4 +1,5 @@
-package chapter2.example;
+package course2.chapter3.example;
+
 
 import java.util.Scanner;
 

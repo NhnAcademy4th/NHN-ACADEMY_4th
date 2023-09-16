@@ -1,4 +1,4 @@
-package chapter4.example;
+package course2.chapter4;
 
 public class Dice {
     private static int numberOfDice = 2; //주사위 개수

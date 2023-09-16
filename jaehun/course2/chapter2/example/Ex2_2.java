@@ -1,4 +1,4 @@
-package chapter2.example;
+package course2.chapter2.example;
 
 import java.util.ArrayList;
 

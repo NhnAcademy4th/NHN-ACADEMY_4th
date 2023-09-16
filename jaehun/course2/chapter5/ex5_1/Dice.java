@@ -1,4 +1,4 @@
-package chapter5.ex5_1;
+package course2.chapter5.ex5_1;
 
 public class Dice {
     private int[] dices;
