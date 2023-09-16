@@ -1,3 +1,5 @@
+package algorithm.greatest_common_divisor;
+
 public class Main {
 
     public static int[][] TEST_CASES = {

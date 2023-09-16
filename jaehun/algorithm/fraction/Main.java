@@ -1,4 +1,5 @@
-import com.sun.security.jgss.GSSUtil;
+package algorithm.fraction;
+
 import java.math.BigDecimal;
 
 public class Main {

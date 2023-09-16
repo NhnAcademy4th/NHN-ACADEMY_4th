@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package algorithm.least_common_multiple;
 
 public class Main {
 
