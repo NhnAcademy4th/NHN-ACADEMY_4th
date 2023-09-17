@@ -1,7 +1,7 @@
 package course2.chapter3.example;
 
 
-import textio.TextIO;
+import course2.textio.TextIO;
 
 public class Ex3_3 {
 

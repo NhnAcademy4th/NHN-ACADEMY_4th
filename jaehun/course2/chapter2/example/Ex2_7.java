@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Ex2_7 {
     public static void main(String[] args) {
 
-        File file = new File("./chapter2/example/testdata.txt");
+        File file = new File("course2/chapter2/example/testdata.txt");
         try{
             Scanner sc = new Scanner(file);
             String name=sc.nextLine();

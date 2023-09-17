@@ -1,13 +1,13 @@
 package course2.chapter3.example;
 
 
-import textio.TextIO;
+import course2.textio.TextIO;
 
 public class Ex3_5 {
     public static void main(String[] args) {
 
         try {
-            TextIO.readFile("./chapter3/example/sales.dat");
+            TextIO.readFile("course2/chapter3/example/sales.dat");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             System.exit(1);
