@@ -1,11 +1,6 @@
 
 public class ex2_4_1 {
 
-    private static final double QUATER_TO_DOLLAR = 0.25;
-    private static final double DIME_TO_DOLLAR = 0.1;
-    private static final double NICKEL_TO_DOLLAR = 0.05;
-    private static final double PENNY_TO_DOLLAR = 0.01;
-
     public static void main(String[] args) {
 
         if (args.length > 4) {
@@ -18,12 +13,15 @@ public class ex2_4_1 {
             coins[i] = Integer.parseInt(args[i]);
         }
 
-        double quaters = coins[0] * QUATER_TO_DOLLAR;
-        double dimes = coins[1] * DIME_TO_DOLLAR;
-        double nickels = coins[2] * NICKEL_TO_DOLLAR;
-        double pennies = coins[3] * PENNY_TO_DOLLAR;
+        double quater = 0.25;
+        double dime = 0.1;
+        double nickel = 0.05;
+        double penny = 0.01;
 
-        double dollars = quaters + dimes + nickels + pennies;
+        double dollars = coins[0] * quater +
+                coins[1] * dime +
+                coins[2] * nickel +
+                coins[3] * penny;
 
         System.out.printf("%1.2f", dollars);
 
