@@ -1,17 +1,0 @@
-
-v
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(õŞî’8ëÉšª1
-v
-java:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñˆ€¬8ìÉšª1
-w
-java:S2293„"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñˆ€¬8ìÉšª1
-’
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(­®Åîÿÿÿÿÿ8îÉšª1
-0
-java:S1700"Rename field "hand"(ÜÑÑ¤8îÉšª1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃÍÑŒ8ïÉšª1
-[
-java:S1155m">Use isEmpty() to check whether the collection is empty or not.(Ÿ×´ÿ8ŒÊšª1
-\
-java:S1155…">Use isEmpty() to check whether the collection is empty or not.(Ÿ×´ÿ8Êšª1
-K	java:S108˜")Either remove or fill this block of code.(ıöÉøÿÿÿÿ8Êšª1
