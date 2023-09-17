@@ -19,3 +19,7 @@ T
 $src/main/java/algorithm/gcdTest.java,8/7/876392cf6cb87e3c65165cf26473604de66f9169
 U
 %src/main/java/algorithm/Fraction.java,5/9/592b17e7fcba9f05ee06d7c57f93dd27c8cb230e
+Z
+*src/main/java/algorithm/FactorialTest.java,d/0/d08e5719dee1ead7ff4985d4a7e1fe47d5b57f63
+Z
+*src/main/java/algorithm/FibonacciTest.java,c/8/c8758772a0a5ce057695b5100e2058913318f297
