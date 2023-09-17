@@ -5,9 +5,9 @@
 
 |===
 |Chapter 1 | 개인적으로 공부 진행중
-|Chapter 2 | 피드백 반영 중, 이론 공부 미진행
-|Chapter 3 | 피드백 반영 중, 이론 공부 미진행
-|Chapter 4 | Java Fx 관련 문제 미작성
+|Chapter 2 | 이론 공부 미진행
+|Chapter 3 | 이론 공부 미진행
+|Chapter 4 | Java Fx 관련 문제 미작성, 이론 공부 미진행
 |Chapter 5 | 연습문제 작성 완료, 이론 공부 미진행
 |===
 
