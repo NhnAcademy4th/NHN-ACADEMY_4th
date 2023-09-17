@@ -1,5 +1,5 @@
 package ch05.resource;
-public class AdditionQuestion {
+public class AdditionQuestion implements IntQuestion{
 
     private int a, b;  // The numbers in the problem.
 
