@@ -1,6 +1,6 @@
 package ex5_1;
 
-public final class Dice {
+public class Dice {
 
     private int diceEye;
 

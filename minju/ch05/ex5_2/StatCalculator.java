@@ -30,6 +30,7 @@ public class StatCalculator {
             calculator.enter(number);
 
         }
+
         scanner.close();
         System.out.println(calculator);
 
