@@ -14,9 +14,6 @@ public class ch5_2 {
 
         System.out.println(calc.getCount());
         System.out.println(calc.getCount());
-        System.out.println(calc.getSum());
-        System.out.println(calc.getMean());
-        System.out.println(calc.getMax());
-        System.out.println(calc.getMin());
+        System.out.println(calc);
     }
 }

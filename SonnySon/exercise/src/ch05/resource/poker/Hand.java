@@ -19,6 +19,23 @@ public class Hand {
         hand = new ArrayList<Card>();
     }
 
+    public ArrayList<Card> getHand(){
+        return hand;
+    }
+
+    @Override
+    public String toString(){
+        sortByValue();
+
+        StringBuilder result = new StringBuilder();
+
+        for(Card card : hand){
+            result.append(card.getSuitAsString()).append("  ").append(card.getValueAsString()).append("\n");
+        }
+
+        return result.toString();
+    }
+
     /**
      * Remove all cards from the hand, leaving it empty.
      */
@@ -74,6 +91,7 @@ public class Hand {
      * @param position the position of the card that is to be returned
      * @throws IllegalArgumentException if position does not exist in the hand
      */
+
     public Card getCard(int position) {
         if (position < 0 || position >= hand.size())
             throw new IllegalArgumentException("Position does not exist in hand: "

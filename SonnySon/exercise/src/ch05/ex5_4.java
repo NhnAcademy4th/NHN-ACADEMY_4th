@@ -5,6 +5,7 @@ import ch05.resource.poker.Deck;
 import java.util.Scanner;
 
 public class ex5_4 {
+
     public static void main(String[] args) {
         BlackjackHand blackjackHand = new BlackjackHand();
 

@@ -4,6 +4,8 @@ public class PairOfDice {
     private int die1;   // Number showing on the first die.
     private int die2;   // Number showing on the second die.
 
+    private final int MAX_DICE_VALUE = 6;
+
     public PairOfDice() {
         // Constructor.  Rolls the dice, so that they initially
         // show some random values.
@@ -20,8 +22,8 @@ public class PairOfDice {
     public void roll() {
         // Roll the dice by setting each of the dice to be
         // a random number between 1 and 6.
-        die1 = (int)(Math.random()*6) + 1;
-        die2 = (int)(Math.random()*6) + 1;
+        die1 = (int)(Math.random()*MAX_DICE_VALUE) + 1;
+        die2 = (int)(Math.random()*MAX_DICE_VALUE) + 1;
     }
 
     public int getDie1(){

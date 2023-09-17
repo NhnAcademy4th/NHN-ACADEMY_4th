@@ -78,5 +78,12 @@ public class StatCalc {
         return Math.sqrt( squareSum/count - mean*mean );
     }
 
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(getSum()+"\n").append(getMean()+"\n").append(getMax()+"\n").append(getMin()+"\n");
+        return sb.toString();
+    }
+
 
 }  // end class StatCalc
