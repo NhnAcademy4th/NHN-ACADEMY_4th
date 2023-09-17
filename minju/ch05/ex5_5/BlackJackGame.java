@@ -26,8 +26,6 @@ public class BlackJackGame {
     public void start() {
 
         System.out.println("블랙잭 게임을 시작합니다.\n");
-        isUserWin = false;
-        isDealerWin = false;
 
         deck.shuffle();
         setCards();

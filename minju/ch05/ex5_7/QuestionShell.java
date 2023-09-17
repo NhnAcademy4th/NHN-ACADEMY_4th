@@ -7,7 +7,7 @@ public class QuestionShell {
     private QuestionShell() {
     }
 
-    private static IntQuestion[] questions = new IntQuestion[10];
+    private static IntQuestion[] questions = new IntQuestion[11];
     private static int[] answers = new int[questions.length];
 
     public static void askQuestion() {
@@ -33,12 +33,22 @@ public class QuestionShell {
 
         int questionNumber = questions.length;
 
-        for (int i = 0; i < questionNumber / 2; i++) {
+        for (int i = 0; i < 5; i++) {
             questions[i] = new AdditionQuestion();
         }
-        for (int i = questionNumber / 2; i < questionNumber; i++) {
+        for (int i = 5; i < questionNumber - 1; i++) {
             questions[i] = new SubQuestion();
         }
+        questions[questionNumber - 1] = new IntQuestion() {
+            public String getQuestion() {
+                return "What is the answer to the ultimate question " +
+                        " of life, the universe, and everything?";
+            }
+
+            public int getCorrectAnswer() {
+                return 42;
+            }
+        };
     }
 
     private static void grading() {
