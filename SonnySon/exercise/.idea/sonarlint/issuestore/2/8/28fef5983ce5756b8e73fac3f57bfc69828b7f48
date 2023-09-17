@@ -1,0 +1,9 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¿È÷ûÿÿÿÿ8¹»‹³©1
+u	java:S116"YRename this field "MAX_DICE_VALUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øş½†8³‰ˆª1
+>
+java:S1170"!Make this final field static too.(øş½†8àÃ‰ª1
+F
+java:S2140")Use "java.util.Random.nextInt()" instead.(Ó‰ğ8¾»‹³©1
+K
+java:S2140")Use "java.util.Random.nextInt()" instead.(ãÅÃçûÿÿÿÿ8¾»‹³©1
