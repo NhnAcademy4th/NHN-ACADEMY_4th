@@ -85,7 +85,9 @@ API(Application Programming Interface) 응용 프로그램 프로그래밍 인�
 
 시스템을 보면 java.lang이라는것에 종속되어있는 클래스이다. 그러니까 정확히 치면 java.lang.System.out.println() 이건데.
 java.lang은 스태틱으로 항상 임포트 되어있으니까 그냥 시스템~ 이라고 하면 알아듣는것이다.
+
 image::image-2023-09-14-22-03-09-011.png[]
+
 이걸보자. 친절히 사진도 가져왔다. out.println이 아니라 PrintStream.println인데?
 밑에보면 out으로 static 상수로다가 짧게 쓰라고 선언 되어있다.
 

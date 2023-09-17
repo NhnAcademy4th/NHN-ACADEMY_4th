@@ -19,6 +19,7 @@ public class ex4_1 {
      * @param line String value
      * @return First Char and after space Char toUpperCase
      */
+
     private static String printCapitalized(String line) {
 
         StringTokenizer st = new StringTokenizer(line);
