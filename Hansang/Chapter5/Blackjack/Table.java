@@ -156,7 +156,5 @@ public class Table {
             distrubutCard(dealer);
         }
     }
-
-
 }
 
