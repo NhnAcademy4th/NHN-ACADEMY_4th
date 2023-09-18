@@ -1,4 +1,4 @@
-package com.Chapter2.Chapter2;
+package com.Chapter2;
 
 import java.util.Scanner;
 
@@ -7,8 +7,19 @@ public class ex2_3 {
 
     Scanner sc = new Scanner(System.in);
     String name = sc.nextLine();
+    StringBuilder sb = new StringBuilder();
 
-    System.out.println("Hello , " + name.toUpperCase() + " nice to meet you!");
+    for(char c : name.toCharArray()){
+        if(c >= 'a' && c <= 'z'){
+               sb.append((char)(c - 32));
+        }else if (c >= 'A' && c <= 'Z'){
+               sb.append((char)(c + 32));
+        }
+    }
+
+    name = sb.toString();
+
+    System.out.println("Hello , " + name + " nice to meet you!");
     }
 
 }

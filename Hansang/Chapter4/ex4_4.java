@@ -14,14 +14,18 @@ public class ex4_4 {
             }
             twoDice[i] = twoDice[i] / max_val;
         }
+
+        resultPrinter(twoDice);
+
+
+    }
+
+    private static void resultPrinter(double[] twoDice){
         System.out.println("Total On Dice     Average Number of Rolls");
         System.out.println("-------------     -----------------------");
         for(int i = 0; i < twoDice.length; i++){
-            System.out.printf("%5d                   %7.4f", (i+2), twoDice[i]);
+            System.out.printf("%7d%24.4f", (i+2), twoDice[i]);
             System.out.println(" ");
-
         }
-
-
     }
 }

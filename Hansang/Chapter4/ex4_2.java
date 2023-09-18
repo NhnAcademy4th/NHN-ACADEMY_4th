@@ -2,7 +2,7 @@ package com.nhnacademy;
 
 public class ex4_2 {
 
-    private static String[] testcase = { "34A7", "ff8", "174204", "FADE", "ROg"};
+    private static String[] testcase = { "34A7", "ff8", "174204", "FADE" , "F0g"};
 
     private static int[] solvecase = {13479,4088, 1524228,64222};
     public static int hTod(String str){
@@ -20,7 +20,7 @@ public class ex4_2 {
     public static int hexaDecimal(char c){
             int number;
 
-        switch (c) {
+        switch (Character.toLowerCase(c)) {
             case '0': number = 0;
                 break;
             case '1': number = 1;
@@ -41,23 +41,17 @@ public class ex4_2 {
                 break;
             case '9': number = 9;
                 break;
-            case 'a':
-            case 'A': number = 10;
+            case 'a': number = 10;
                 break;
-            case 'b':
-            case 'B': number = 11;
+            case 'b': number = 11;
                 break;
-            case 'c':
-            case 'C': number = 12;
+            case 'c': number = 12;
                 break;
-            case 'd':
-            case 'D': number = 13;
+            case 'd': number = 13;
                 break;
-            case 'e':
-            case 'E': number = 14;
+            case 'e': number = 14;
                 break;
-            case 'f':
-            case 'F': number = 15;
+            case 'f': number = 15;
                 break;
             default: number = -1;
                 break;
@@ -74,7 +68,7 @@ public class ex4_2 {
             if (hTod(testcase[i]) == solvecase[i]){
                 System.out.println("good!");
             }else{
-                System.out.println("Convert fail!");
+                throw new ArithmeticException("can not convert Decimal number!");
             }
         }
     }

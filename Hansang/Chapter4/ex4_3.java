@@ -13,7 +13,9 @@ public class ex4_3 {
     //뱀눈을 얻는 경우를 보여라
 
     public static int pairDice(int num) {
-        if(num < 2 || num > 12) {
+        boolean isValidRange = (num < 2 || num > 12);
+
+        if(isValidRange) {
             throw new IllegalArgumentException("Total must between 2 to 12!");
         }
 
