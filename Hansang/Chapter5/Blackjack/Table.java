@@ -36,6 +36,7 @@ public class Table {
             distrubutCard(dealer);
         }
         playPase(player, dealer);
+        hitTurn();
     }
 
     //플레이어는 자식의 패를 확인하고, 딜러의 패 첫번째 장을 확인 하기 위한 메서드
@@ -43,7 +44,7 @@ public class Table {
         System.out.println(player);
         System.out.println("-------------------------------");
         System.out.println("dealer's Hand");
-        System.out.println(dealer.getCardDenomination(0));
+        System.out.println(dealer.getCard(0));
     }
 
 
@@ -66,33 +67,94 @@ public class Table {
     private boolean reciveExtraCard() {
         System.out.println("3턴이 지나고 딜러와 플레이어가 카드를 확인합니다.");
         System.out.println("카드를 받을지 결정해주세요: 1. 한장을 더 받는다 2. 결과를 확인한다.");
-        //해당 문장을 나중에 밖으로 빼주기..
 
         int choice;
         try {
             choice = Integer.parseInt(Inputshell.inputFromshell());
         } catch (Exception e) {
-            throw new IllegalArgumentException("Please enter 1 or 2");
+            throw new IllegalArgumentException("Input error!");
         }
-        boolean isOneOrTwo = (choice == 1 || choice == 2);
-        if (!isOneOrTwo) {
+        boolean isValidChoice = (choice == 1 || choice == 2);
+        if (!isValidChoice) {
             throw new IllegalArgumentException("선택지 안에서 골라주세요!");
         }
 
         return choice == 1;
     }
 
-    //todo 승리 판별 메서드
-    //todo 본게임 시작 메서드
-    //딜러 카드 추가 결정 메서드
-//    private boolean dealerWinRate(User dealer){
-//        int currentValue =  dealer.getCardDenomination(0)
-//
-//        for(int i = 0; i < deck.getSize(); i++;
-//
-//        }
-//
-//        return false;
-//    }
+    //hit or stand
+    private void hitTurn() {
+        int count = 0;
+
+        while (count < 4) {
+            if (reciveExtraCard()) {
+                distrubutCard(player);
+                System.out.println(player);
+            } else {
+                break;
+            }
+
+            if (isvalidRange(TotalScore(player))) {
+                resultPrinter("dealer");
+                return;
+            }
+
+            if (TotalScore(player) == 21) {
+                resultPrinter("player");
+                return;
+            }
+
+            count++;
+        }
+        endPase();
+    }
+
+    private boolean isvalidRange(int number) {
+        return number > 21;
+    }
+
+    //결과 확인 메서드
+    private void endPase() {
+        dealerHit();
+
+        boolean isDrow = (TotalScore(player) == TotalScore(dealer));
+        boolean isWin = (TotalScore(player) > TotalScore(dealer));
+
+        if (isWin) {
+            resultPrinter("player");
+            return;
+        } else if (isDrow) {
+            resultPrinter("both ");
+            return;
+        }
+        resultPrinter("dealer");
+    }
+
+    private void resultPrinter(String str) {
+        System.out.println(str + " win!");
+        System.out.println("dealer's" + dealer);
+    }
+
+    //총 점수를 받아오는 메서드
+    private int TotalScore(User player) {
+        int score = 0;
+        boolean isAce;
+        for (int i = 0; i < player.getSize(); i++) {
+            score += player.getCardDenomination(i);
+
+            isAce = (isvalidRange(score) && player.getCardDenomination(i) == 11);
+            if (isAce) {
+                score -= 10;
+            }
+        }
+        return score;
+    }
+
+    //딜러 카드 추가 메서드
+    private void dealerHit() {
+        while (TotalScore(dealer) < 17 && !isvalidRange(TotalScore(dealer))) {
+            distrubutCard(dealer);
+        }
+    }
 }
 

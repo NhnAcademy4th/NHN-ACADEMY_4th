@@ -15,7 +15,15 @@ public class User {
         Card c = hand.get(index);
         return c.getDenominationValue();
     }
-    
+
+    public int getSize() {
+        return hand.size();
+    }
+
+    public Card getCard(int index) {
+        return hand.get(index);
+    }
+
 
     @Override
     public String toString() {

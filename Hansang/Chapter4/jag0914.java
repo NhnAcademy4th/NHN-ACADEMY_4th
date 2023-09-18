@@ -70,9 +70,9 @@ public class jag0914 {
         public static int getDecimalNumber(BigDecimal num) {
             String str = num.toPlainString();
             int index = str.indexOf('.');
-            int decimalNum = Integer.parseInt(str.substring(index+1));
+            int decimalNumber = Integer.parseInt(str.substring(index+1));
 
-            return decimalNum;
+            return decimalNumber;
         }
 
         public static String solution(String input) {
@@ -83,15 +83,10 @@ public class jag0914 {
 
 
             int decimalNumber = getDecimalNumber(number);
-            int count = 1;
             int whiledecimal = decimalNumber;
 
-            while(whiledecimal / 10 != 0){
-                whiledecimal /= 10;
-                count++;
-            }
 
-            double denominator = Math.pow(10, count);
+            double denominator = Math.pow(10, number.scale());
             int numerator = decimalNumber;
 
             return new Fraction(numerator, (int) denominator, isNegative(number)).toString();
@@ -106,7 +101,7 @@ public class jag0914 {
     }
 
     public static void main(String[] args) {
-            String input = "-1.2";
+            String input = "-0.2";
                 System.out.println(solution(input));
         }
 

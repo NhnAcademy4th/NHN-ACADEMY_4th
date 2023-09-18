@@ -1,19 +1,23 @@
 package com.nhnacademy.Chapter5;
 
 public class ex5_1 {
-    private static int countPair(int number, PairOfDice pod){
-        boolean isTwotoTwelve = (number >= 2 && number <= 12);
+
+    private static int countPair(int number, PairOfDice pod) {
+        boolean isValidRange = (number >= 2 && number <= 12);
+
         boolean isTotalsame; // recursiveCounter를 사용하면 해당 변수가 필요없음
         int count = 0;
         int totalCount = 0;
 
-        if(!(isTwotoTwelve)){
+
+        if (!(isValidRange)) {
             throw new IllegalArgumentException("That number can not be a total!");
         }
 
-        while(true){
+        while (true) {
             isTotalsame = ((pod.getDice1() + pod.getDice2()) == number);
-            if(isTotalsame){
+            if (isTotalsame) {
+
                 break;
             }
 
@@ -40,7 +44,9 @@ public class ex5_1 {
 //    }
 
     //테스트에서 PairofDice 생성
-    public static int diceCompare(int number){
+
+    public static int Comparedice(int number) {
+
         PairOfDice pod = new PairOfDice();
         int result = countPair(number, pod);
         //9월15일 알고리즘문제의 최종 출력 부분과 비슷한 구조를 가지고 있기때문에
@@ -48,8 +54,8 @@ public class ex5_1 {
         return result;
     }
 
-    private static void testProblem1(){
-        Resultprinter.resultLine(diceCompare(2));
+    private static void testProblem1() {
+        Resultprinter.resultLine(Comparedice(2));
 
     }
 

@@ -1,4 +1,4 @@
-package com.Chapter2.Chapter2;
+package com.Chapter2;
 
 import java.io.File;
 import java.io.IOException;
