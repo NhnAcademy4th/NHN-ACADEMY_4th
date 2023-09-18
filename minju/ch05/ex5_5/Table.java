@@ -7,13 +7,12 @@ public class Table {
 
     private static int userMoney = 100_0000;
     private static int betMoney;
-    private static Scanner scanner = new Scanner(System.in);
 
     private Table() {
     }
 
     public static void startBlackjack() {
-
+        Scanner scanner = new Scanner(System.in);
         while (userMoney > 0) {
             bet();
             BlackJackGame game = new BlackJackGame();
@@ -29,6 +28,7 @@ public class Table {
     }
 
     private static void bet() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("베팅금액을 입력해주세요 : ");
         try {
             betMoney = scanner.nextInt();
@@ -52,7 +52,9 @@ public class Table {
     }
 
     private static boolean isPlayGame() {
-        scanner.nextLine();
+
+        Scanner scanner = new Scanner(System.in);
+
         while (true) {
             System.out.print("게임을 진행하시겠습니까?");
             String answer = scanner.nextLine().toUpperCase();
