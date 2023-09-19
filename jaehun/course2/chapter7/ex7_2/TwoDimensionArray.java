@@ -31,9 +31,8 @@ public class TwoDimensionArray {
     }
 
     public void transposeArray() {
-        int temp = rows;
-        rows = columns;
-        columns = temp;
+        swapColumnRow();
+
         int[][] transposedArray = new int[columns][rows];
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows; j++) {
@@ -41,5 +40,11 @@ public class TwoDimensionArray {
             }
         }
         array = transposedArray;
+    }
+
+    private void swapColumnRow() {
+        int temp = rows;
+        rows = columns;
+        columns = temp;
     }
 }
