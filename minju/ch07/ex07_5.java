@@ -21,12 +21,10 @@ public class ex07_5 {
                 System.out.println("정수가 아닙니다. 다시 입력해주세요.");
                 continue;
             }
-            if (number == 0)
+            if (number == 0 || count == 100)
                 break;
             list.add(number);
             count++;
-            if (count == 100)
-                break;
         }
         scanner.close();
         sort(list);
