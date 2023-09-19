@@ -19,6 +19,7 @@ public class ex4_2 {
 
     public static int hexToDecimal(String str) {
         int value = 0;
+        str = str.toUpperCase();
 
         for (int i = 0; i < str.length(); i++) {
             int hexValue = hexValue(str.charAt(i));
@@ -51,22 +52,16 @@ public class ex4_2 {
             case '9':
                 return 9;
             case 'A':
-            case 'a':
                 return 10;
             case 'B':
-            case 'b':
                 return 11;
             case 'C':
-            case 'c':
                 return 12;
             case 'D':
-            case 'd':
                 return 13;
             case 'E':
-            case 'e':
                 return 14;
             case 'F':
-            case 'f':
                 return 15;
             default:
                 throw new IllegalArgumentException("16진수 형식에 맞지 않습니다.");
