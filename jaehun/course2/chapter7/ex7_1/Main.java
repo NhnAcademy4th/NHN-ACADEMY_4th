@@ -1,19 +1,23 @@
 package course2.chapter7.ex7_1;
 
+import java.util.ArrayList;
+
 public class Main {
+    private static ArrayListGenerator generator = new ArrayListGenerator();
+
     public static void main(String[] args) {
-        ArrayListGenerator generator = new ArrayListGenerator();
-        int count = 3;
-        int maxValue = 10;
-        //try catch를 여기서 쓰는 것이 맞을까?
-        //그렇다면 이것을 ArrayListGenerator에서 쓰는게 맞을까?
+        test(3, 10);
+        test(10, 10);
+        test(11, 10);
+        test(-1, 10);
+    }
+
+    public static void test(int count, int maxValue) {
         try {
             generator.generate(count, maxValue);
             System.out.println(generator.getArrayList());
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-
     }
-
 }
