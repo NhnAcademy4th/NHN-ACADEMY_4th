@@ -4,12 +4,15 @@
 === **팀 선택 과정** : 과정2 JavaFX
 
 |===
-|Chapter 1 | 개인적으로 공부 진행중
-|Chapter 2 | 이론 공부 미진행
-|Chapter 3 | 이론 공부 미진행
-|Chapter 4 | Java Fx 관련 문제 미작성, 이론 공부 미진행
-|Chapter 5 | 연습문제 작성 완료, 이론 공부 미진행
+|Chapter 1 | -
+|Chapter 2 | -
+|Chapter 3 | -
+|Chapter 4 | -
+|Chapter 5 | -
+|Chapter 6 | 9/20 3번까지 풀이
+|Chapter 7 | JavaFx 문제 풀어야함
 |===
+    JavaFx 문제는 javaFxEx 폴더에 있습니다.
 
 === **개인 선택 과정** : 과정1
 아직 시작 전
