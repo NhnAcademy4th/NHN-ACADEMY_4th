@@ -5,10 +5,10 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-public class ArrayListGenerator {
-    private ArrayList<Integer> arrayList;
+public class ListGenerator {
+    private List<Integer> numberList;
 
-    public void generate(int count, int maxValue) {
+    public ListGenerator(int count, int maxValue) {
         if (count > maxValue) {
             throw new IllegalArgumentException("최대값보다 많은 개수를 요소로 추가할 수는 없습니다.");
         }
@@ -16,7 +16,7 @@ public class ArrayListGenerator {
             throw new IllegalArgumentException("개수가 0보다 작을수는 없습니다.");
         }
 
-        arrayList = new ArrayList<>();
+        numberList = new ArrayList<>();
         addUniqueRandomNums(count, maxValue);
     }
 
@@ -26,10 +26,10 @@ public class ArrayListGenerator {
             int value = (int) (Math.random() * maxValue) + 1;
             uniqueNums.add(value);
         }
-        arrayList.addAll(uniqueNums);
+        numberList.addAll(uniqueNums);
     }
 
-    public List<Integer> getArrayList() {
-        return new ArrayList<>(arrayList);
+    public String getNumbersToString() {
+        return numberList.toString();
     }
 }

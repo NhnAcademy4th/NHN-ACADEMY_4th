@@ -7,7 +7,7 @@ public class TwoDimensionArray {
     private int columns;
     private int rows;
 
-    public void setRandomArray(int columns, int rows) {
+    public TwoDimensionArray(int columns, int rows) {
         if (columns <= 0 || rows <= 0) {
             throw new IllegalArgumentException("행과 열은 양의 정수로 입력해주세요.");
         }
@@ -32,7 +32,6 @@ public class TwoDimensionArray {
 
     public void transposeArray() {
         swapColumnRow();
-
         int[][] transposedArray = new int[columns][rows];
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows; j++) {
@@ -47,4 +46,5 @@ public class TwoDimensionArray {
         rows = columns;
         columns = temp;
     }
+
 }

@@ -1,10 +1,6 @@
 package course2.chapter7.ex7_1;
 
-import java.util.ArrayList;
-
 public class Main {
-    private static ArrayListGenerator generator = new ArrayListGenerator();
-
     public static void main(String[] args) {
         test(3, 10);
         test(10, 10);
@@ -14,8 +10,8 @@ public class Main {
 
     public static void test(int count, int maxValue) {
         try {
-            generator.generate(count, maxValue);
-            System.out.println(generator.getArrayList());
+            ListGenerator generator = new ListGenerator(count, maxValue);
+            System.out.println(generator.getNumbersToString());
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }

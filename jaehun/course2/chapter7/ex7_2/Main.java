@@ -1,7 +1,6 @@
 package course2.chapter7.ex7_2;
 
 public class Main {
-    private static TwoDimensionArray twoDimensionArray = new TwoDimensionArray();
 
     public static void main(String[] args) {
         test(5, 4);
@@ -11,8 +10,9 @@ public class Main {
     }
 
     public static void test(int columns, int rows) {
+        TwoDimensionArray twoDimensionArray;
         try {
-            twoDimensionArray.setRandomArray(columns, rows);
+            twoDimensionArray = new TwoDimensionArray(columns, rows);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return;
