@@ -2,13 +2,12 @@ package course2.chapter7.ex7_3;
 
 public class ArrayGenerator {
 
-    int maxIntArrayLength = 10000;
-    int maxIntValue = 100;
-    int maxStringArrayLength = 10000;
+    static int maxIntArrayLength = 10000;
+    static int maxIntValue = 100;
+    static int maxStringArrayLength = 10000;
+    static int maxStringLength = 30;
 
-    int maxStringLength = 30;
-
-    public int[] generateIntArray() {
+    public static int[] generateIntArray() {
         int randomLength = generateRandomNumber(maxIntArrayLength);
         int[] array = new int[randomLength];
         for (int i = 0; i < randomLength; i++) {
@@ -17,7 +16,7 @@ public class ArrayGenerator {
         return array;
     }
 
-    public String[] generateStringArray() {
+    public static String[] generateStringArray() {
         int randomLength = generateRandomNumber(maxStringArrayLength);
         String[] array = new String[randomLength];
         for (int i = 0; i < randomLength; i++) {
@@ -26,7 +25,7 @@ public class ArrayGenerator {
         return array;
     }
 
-    public String generateRandomString() {
+    private static String generateRandomString() {
         String randomString = "";
         int randomLength = generateRandomNumber(maxStringLength);
         for (int i = 0; i < randomLength; i++) {
@@ -36,11 +35,11 @@ public class ArrayGenerator {
         return randomString;
     }
 
-    public int generateRandomNumber(int minValue, int maxValue) {
+    private static int generateRandomNumber(int minValue, int maxValue) {
         return (int) (Math.random() * (maxValue - minValue)) + minValue;
     }
 
-    public int generateRandomNumber(int maxValue) {
+    private static int generateRandomNumber(int maxValue) {
         return (int) (Math.random() * (maxValue)) + 1;
     }
 }
