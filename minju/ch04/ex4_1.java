@@ -5,21 +5,21 @@ import java.io.InputStreamReader;
 public class ex4_1 {
 
     public static void printCapitalized(String sentence) {
-        boolean flag = true;
+        boolean isBlank = true;
         for (int i = 0; i < sentence.length(); i++) {
 
             char character = sentence.charAt(i);
 
-            if (flag && Character.isLetter(character)) {
+            if (isBlank && Character.isLetter(character)) {
                 System.out.print(Character.toUpperCase(character));
             } else {
                 System.out.print(character);
             }
 
             if (character == ' ') {
-                flag = true;
+                isBlank = true;
             } else {
-                flag = false;
+                isBlank = false;
             }
 
         }
