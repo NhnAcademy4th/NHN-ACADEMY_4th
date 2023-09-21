@@ -1,17 +1,16 @@
 package course2.chapter7.ex7_5;
 
 public class Sort {
-    public double[] sortByBubble(double[] array) {
-        double[] sortedArray = array.clone();
-        for (int i = sortedArray.length; i > 0; i--) {
+    public static double[] sortByBubble(double[] array) {
+        for (int i = array.length-1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (sortedArray[j] > sortedArray[j + 1]) {
-                    double temp = sortedArray[j];
-                    sortedArray[j] = sortedArray[j + 1];
-                    sortedArray[j + 1] = temp;
+                if (array[j] > array[j + 1]) {
+                    double temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
-        return sortedArray;
+        return array;
     }
 }
