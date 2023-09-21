@@ -11,6 +11,8 @@
 |Chapter 5 | -
 |Chapter 6 | 9/20 3번까지 풀이
 |Chapter 7 | JavaFx 문제 풀어야함
+|Chapter 6 | 9/21 연습문제 풀이 중
+|Chapter 7 | JavaFx 문제 풀어야함
 |===
     JavaFx 문제는 javaFxEx 폴더에 있습니다.
 
