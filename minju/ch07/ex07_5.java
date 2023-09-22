@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ex07_5 {
@@ -11,16 +10,18 @@ public class ex07_5 {
         ArrayList<Integer> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        int number;
         int count = 0;
         while (true) {
             System.out.print("정수를 입력해주세요 : ");
-            try {
-                number = scanner.nextInt();
-            } catch (InputMismatchException e) {
+
+            String inputNumber = scanner.nextLine();
+            if (!inputNumber.matches("^\\d+$")) {
                 System.out.println("정수가 아닙니다. 다시 입력해주세요.");
                 continue;
             }
+
+            int number = Integer.parseInt(inputNumber);
+
             if (number == 0 || count == 100)
                 break;
             list.add(number);
