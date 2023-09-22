@@ -1,21 +1,14 @@
 package ch05.resource;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class NullTest{
-    private int count = 0;
-    public void increment() {
-        count++;
-    }
-    public int getCount() {
-        NullTest c;
-
-        return count;
-
-    }
-
     public static void main(String[] args) {
-        Integer a = new Integer(3);
-        Integer b = new Integer(3);
+        double[] x = new double[10];
 
-        System.out.println(a.equals(b));
+        List<Integer> xx = new ArrayList<>();
+        List<Integer> yy = new LinkedList<>();
     }
 }
