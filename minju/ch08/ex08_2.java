@@ -8,8 +8,6 @@ public class ex08_2 {
         try (Scanner scanner = new Scanner(System.in)) {
             BigInteger number = new BigInteger(scanner.nextLine());
             collatz(number);
-        } catch (NumberFormatException e) {
-            System.out.println("값이 잘못 입력되었습니다.");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }

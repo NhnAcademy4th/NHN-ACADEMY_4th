@@ -8,22 +8,18 @@ public class ex08_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
+        String answer = "";
+        while (!answer.equals("no")) {
             try {
 
                 System.out.print("Enter A : ");
-                String inputA = scanner.nextLine().toLowerCase();
+                String inputA = scanner.nextLine();
 
                 System.out.print("Enter B : ");
-                String inputB = scanner.nextLine().toLowerCase();
+                String inputB = scanner.nextLine();
 
                 System.out.print("Enter C : ");
-                String inputC = scanner.nextLine().toLowerCase();
-
-                if (inputA.equals("no") || inputB.equals("no") || inputC.equals("no")) {
-                    System.out.println("종료합니다.");
-                    break;
-                }
+                String inputC = scanner.nextLine();
 
                 String check = "\\d+(.\\d+)?";
                 if (!(inputA.matches(check) && inputB.matches(check) && inputC.matches(check))) {
@@ -36,6 +32,9 @@ public class ex08_1 {
                 double C = Double.parseDouble(inputC);
                 System.out.println("result : " + root(A, B, C));
 
+                System.out.print("종료하시겠습니까? (no 입력시 종료) : ");
+                answer = scanner.nextLine().toLowerCase();
+
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -43,15 +42,15 @@ public class ex08_1 {
         scanner.close();
     }
 
-    static public double root(double A, double B, double C)
+    public static double root(double a, double b, double c)
             throws IllegalArgumentException {
-        if (A == 0) {
+        if (a == 0) {
             throw new IllegalArgumentException("A can't be zero.");
         } else {
-            double disc = B * B - 4 * A * C;
+            double disc = b * b - 4 * a * c;
             if (disc < 0)
                 throw new IllegalArgumentException("Discriminant < zero.");
-            return (-B + Math.sqrt(disc)) / (2 * A);
+            return (-b + Math.sqrt(disc)) / (2 * a);
         }
     }
 }
