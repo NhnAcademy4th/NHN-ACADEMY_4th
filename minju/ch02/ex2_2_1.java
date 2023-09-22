@@ -13,11 +13,9 @@ public class ex2_2_1 {
 
 class Dice {
 
-    private int max;
     private int value;
 
     public Dice(int max) {
-        this.max = max;
         this.value = (int) (Math.random() * max) + 1;
     }
 

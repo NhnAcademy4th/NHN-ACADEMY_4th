@@ -1,6 +1,7 @@
 package com.nhnacademy.Chapter5;
 
-import static com.nhnacademy.Chapter5.ex5_1.diceCompare;
+
+import static com.nhnacademy.Chapter5.ex5_1.Comparedice;
 
 public class ex5_3 {
 
@@ -10,7 +11,9 @@ public class ex5_3 {
         for (int i = 0; i < diceValue.length; i++) {
             StatCalc statCalc = new StatCalc();
             for (int j = 0; j < max_val; j++) {
-                statCalc.enter(diceCompare(i + 2));
+
+                statCalc.enter(Comparedice(i + 2));
+
                 diceValue[i] = statCalc.toString();
             }
         }

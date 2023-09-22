@@ -3,17 +3,13 @@
 == 4기 8조 studyGroup
 
 * Member : 
-https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[손병민], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/Hansang[이한상], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jiwon[홍지원], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jaehun[최재훈], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/minju[김민주] -> 링크는 develop 이며, 매주 일요일 12시 배포 (전까지 본인 코드 정리 하십쇼)
+https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[손병민], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/Hansang[이한상], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jiwon[홍지원], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jaehun[최재훈], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/minju[김민주]
 
 
 * **__하루에 Chapter 1개씩 끝내는것을 목표__**
 ** 매주 일요일 못 따라간 진도, 코드 리뷰 적용 -> 매주 주말 복습으로 변경
 * 코드리뷰는 매일 16:00 진행
 * 수업시간엔 Exercise를 풀고(~16:00), Chapter에 관한 내용은 수업이 아닌 시간에 개인적으로 공부
-
-== 중요!!
-
-**PR은 세명 이상이 확인을 해줘야 합니다!!!!!**
 
 ---
 
@@ -24,8 +20,9 @@ https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[
 * [*] Chapter 3: Programming in the Small II: Control
 * [*] Chapter 4: Programming in the Large I: Subroutines
 * [*] Chapter 5: Programming in the Large II: Objects and Classes
-* [ ] Chapter 6: Introduction to GUI Programming
-* [ ] Chapter 7: Arrays, ArrayLists, and Records
+* [*] Chapter 6: Introduction to GUI Programming 
+  - Blackjack fx 실습 미완성
+* [*] Chapter 7: Arrays, ArrayLists, and Records
 * [ ] Chapter 8: Correctness, Robustness, Efficiency
 * [ ] Chapter 9: Linked Data Structures and Recursion
 * [ ] Chapter 10: Generic Programming and Collection Classes
@@ -48,32 +45,44 @@ https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[
 === 2023/09/13 (목):
 * [*] JavaFX Chapter 4 -> Exercise(Code Review), Quiz
 
-팀회의
-
-1. 레포지토리 어떻게 할건지 이야기했음 
-2. 깃허브 연습을 위해 FXproject는 공유 프로젝트로 진행 -> 레포지토리 따로파기로함
-3. 하루에 한챕터씩 밀다보니 인원들이 시간이 부족하다는 이야기 나옴 -> 일요일 복습에서 토, 일 복습으로 변경
-4. FX가 정말 필요한가? 필요성을 못느끼겠음 -> 그래도 해라
-5. .gitignore 설정
-
-  Member 홍지원 1과정으로 "branch" 
-
 === 2023/09/13 (금):
 * [*] JavaFX Chapter 5 -> Exercise(Code Review), Quiz
 
----
-
 === 2023/09/16 (토) :
 
-* [ ] Goal : ~ JavaFx Chapter 6
+* [*] Exercise(Code Review) 코드 수정, 과정 1 부족한 부분 개인 공부
 
 === 2023/09/16 (일) :
 
-* [ ] Exercise(Code Review) 코드 수정
+* [*] Exercise(Code Review) 코드 수정
+
+=== 2023/09/23 (월) :
+
+* [*] JavaFX Chapter 6 -> Exercise(Code Review), Quiz
+* [*] git ignore 정리
+
+=== ~ 2023/09/24 (화) :
+
+* [*] JavaFX Chapter 7 -> Exercise(Code Review), Quiz
+
+=== ~ 2023/09/25 (수) :
+
+* [*] javaFX exercise 복습
+* [*] heap,stack
+* [*] Exception
+
+
+=== ~ 2023/09/26 (목) :
+
+* [*] javaFX exercise 복습, 코드리뷰
+
+---
 
 === ~ 2023/09/22 (토) :
 
-* [ ] Goal : JavaFX Chapter 13 -> Exercise(Code Review), Quiz
+* [*] Goal : JavaFX Chapter 13 -> Exercise(Code Review), Quiz
+
+
 
 === 2023/09/23 (일) :
 
@@ -86,3 +95,17 @@ https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[
 === 2023/09/25 (화) ~
 
 * [ ] Goal : MIT 6.005
+
+== 중요!!
+
+**PR은 세명 이상이 확인을 해줘야 합니다!!!!!**
+
+
+팀회의
+
+1. 레포지토리 어떻게 할건지 이야기했음 
+2. 깃허브 연습을 위해 FXproject는 공유 프로젝트로 진행 -> 레포지토리 따로파기로함
+3. 하루에 한챕터씩 밀다보니 인원들이 시간이 부족하다는 이야기 나옴 -> 일요일 복습에서 토, 일 복습으로 변경
+4. FX가 정말 필요한가? 필요성을 못느끼겠음 -> 그래도 해라
+5. .gitignore 설정
+

@@ -1,4 +1,5 @@
-package com.Chapter2.Chapter2;
+package com.Chapter2;
+
 
 import java.util.Scanner;
 
