@@ -25,7 +25,7 @@ public class ex08_1 {
                     break;
                 }
 
-                String check = "\\d+(.\\d)?";
+                String check = "\\d+(.\\d+)?";
                 if (!(inputA.matches(check) && inputB.matches(check) && inputC.matches(check))) {
                     System.out.println("값이 잘못 입력되었습니다. 다시 입력해주세요.");
                     continue;
