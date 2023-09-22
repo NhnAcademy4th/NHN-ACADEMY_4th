@@ -10,9 +10,11 @@ public class Ex4_4 {
     }
 
     public static double getAvg(int callNum,int sum){
+        int numberOfDice=2;
+        RollingSimulator simulator = new RollingSimulator(numberOfDice);
         double count=0;
         for(int i =0 ;i<callNum;i++){
-            count+=Dice.count(sum);
+            count+=simulator.countToAnswerSum(sum);
         }
         double avg = count/callNum;
         return avg;

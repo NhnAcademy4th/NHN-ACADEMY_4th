@@ -1,33 +1,19 @@
 package course2.chapter4;
 
 public class Dice {
-    private static int numberOfDice = 2; //주사위 개수
-    private static int maxDiceNumber = 6; // 주사위 최대 번호
+    private int diceEye;
+    private int maxDiceEye;
 
-    public static int getDiceSum() {
-        int sum = 0;
-        for (int i = 0; i < numberOfDice; i++) {
-            sum += getRandomNumber();
-        }
-        return sum;
+    Dice(int maxDiceEye) {
+        this.maxDiceEye = maxDiceEye;
+        diceEye = (int) (Math.random() * maxDiceEye) + 1;
     }
 
-    public static int count(int n){
-        int count=0;
-        while(!isRandomNumSumEqualN(n)){
-            count++;
-        }
-        return count;
+    public void roll(){
+        diceEye = (int) (Math.random() * maxDiceEye) + 1;
     }
 
-    public static boolean isRandomNumSumEqualN(int n){
-        if(getDiceSum()==n)
-            return true;
-        return false;
-    }
-
-    public static int getRandomNumber() {
-        int randomNumber = (int) (Math.random() * maxDiceNumber) + 1;
-        return randomNumber;
+    public int getEye() {
+        return diceEye;
     }
 }

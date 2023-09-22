@@ -39,9 +39,9 @@ public class Ex4_8 {
         for (int i = 0; i < firstNumber.length; i++) {
             if((firstNumber[i]+secondNumber[i])==userAnswer[i]){
                 answerNumber++;
-            }else{
-                wrongNumbers.add(i+1);
+                continue;
             }
+            wrongNumbers.add(i+1);
         }
         System.out.println(answerNumber+"개 맞혔습니다.");
         System.out.print("틀린 문제 : ");
