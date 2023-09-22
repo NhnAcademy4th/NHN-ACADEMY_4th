@@ -105,7 +105,7 @@ public class ch7_3 {
             int maxLoc = 0;
 
             for (int i = 1; i <= lastPlace; i++) {
-                if (isFirstWord(array[i], array[maxLoc]))
+                if (!isFirstWord(array[i], array[maxLoc]))
                     maxLoc = i;
             }
             String temp = array[lastPlace];
@@ -120,11 +120,9 @@ public class ch7_3 {
 
         int shortWordLength = Math.min(charArray1.length, charArray2.length);
 
-        for (int i = 0; i < shortWordLength; i++) {
-            if(charArray1[i]>charArray2[i]){
-                return false;
-            }else if(charArray1[i]<charArray2[i]){
-                return true;
+        for(int i = 0; i < shortWordLength; i++) {
+            if(charArray1[i] != charArray2[i]){
+                return charArray1[i] < charArray2[i];
             }
         }
         return shortWordLength == charArray1.length;
@@ -143,6 +141,23 @@ public class ch7_3 {
         String[] stringTestArrays = ch7_3.createRandomStringArrays(10000);
         sortByArrays(stringTestArrays);
         System.out.println();
-        sortBySelectionSort(stringTestArrays);
+        System.out.println(Arrays.toString(selectionSort(stringTestArrays)));
     }
 }
+
+
+//    private static boolean isFirstWord(String word1, String word2) {
+//        char[] charArray1 = word1.toCharArray();
+//        char[] charArray2 = word2.toCharArray();
+//
+//        int shortWordLength = Math.min(charArray1.length, charArray2.length);
+//
+//        for (int i = 0; i < shortWordLength; i++) {
+//            if(charArray1[i]>charArray2[i]){
+//                return false;
+//            }else if(charArray1[i]<charArray2[i]){
+//                return true;
+//            }
+//        }
+//        return shortWordLength == charArray1.length;
+//    }
