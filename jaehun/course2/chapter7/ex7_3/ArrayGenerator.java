@@ -2,22 +2,23 @@ package course2.chapter7.ex7_3;
 
 public class ArrayGenerator {
 
-    static int maxIntArrayLength = 10000;
-    static int maxIntValue = 100;
-    static int maxStringArrayLength = 10000;
-    static int maxStringLength = 30;
+    private ArrayGenerator() {
+    }
 
     public static int[] generateIntArray() {
-        int randomLength = generateRandomNumber(maxIntArrayLength);
+        int maxIntArrayLength = 10000;
+        int maxIntValue = 100;
+        int randomLength = generateRandomNumber(1, maxIntArrayLength);
         int[] array = new int[randomLength];
         for (int i = 0; i < randomLength; i++) {
-            array[i] = generateRandomNumber(maxIntValue);
+            array[i] = generateRandomNumber(1, maxIntValue);
         }
         return array;
     }
 
     public static String[] generateStringArray() {
-        int randomLength = generateRandomNumber(maxStringArrayLength);
+        int maxStringArrayLength = 10000;
+        int randomLength = generateRandomNumber(1, maxStringArrayLength);
         String[] array = new String[randomLength];
         for (int i = 0; i < randomLength; i++) {
             array[i] = generateRandomString();
@@ -26,20 +27,17 @@ public class ArrayGenerator {
     }
 
     private static String generateRandomString() {
-        String randomString = "";
-        int randomLength = generateRandomNumber(maxStringLength);
+        StringBuilder sb = new StringBuilder();
+        int maxStringLength = 30;
+        int randomLength = generateRandomNumber(1, maxStringLength);
         for (int i = 0; i < randomLength; i++) {
             char randomAlphabet = (char) generateRandomNumber(97, 122);
-            randomString += randomAlphabet;
+            sb.append(randomAlphabet);
         }
-        return randomString;
+        return sb.toString();
     }
 
     private static int generateRandomNumber(int minValue, int maxValue) {
         return (int) (Math.random() * (maxValue - minValue)) + minValue;
-    }
-
-    private static int generateRandomNumber(int maxValue) {
-        return (int) (Math.random() * (maxValue)) + 1;
     }
 }
