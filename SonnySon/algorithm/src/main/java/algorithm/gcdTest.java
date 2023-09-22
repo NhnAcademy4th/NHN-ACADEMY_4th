@@ -2,6 +2,36 @@ package algorithm;
 
 public class gcdTest {
 
+    private int[][] Combination(int[] numberArray){
+        int[][] resultArray = new int[numberArray.length * numberArray.length-1][2];
+
+        int count = 0;
+
+        for (int i = 0; i < numberArray.length - 2; i++) {
+            for (int j = i+1; j < numberArray.length; j++) {
+                resultArray[count++] = new int[]{numberArray[i],numberArray[j]};
+            }
+        }
+        return resultArray;
+    }
+
+    private int[] gcdAll(int[][] combinationArray){
+        int[] resultArray = new int[combinationArray.length];
+        int count = 0;
+        for (int[] array : combinationArray){
+            resultArray[count++] = gcd(array[0],array[1]);
+        }
+        return resultArray;
+    }
+    private int gcdAll(int[] gcdAll){
+        int max = 0;
+        for (int value :
+                gcdAll) {
+            max = Math.max(max, value);
+        }
+        return max;
+    }
+
     private static int gcd(int number1, int number2) {
         if (number1 % number2 == 0) {
             return number2;
@@ -45,6 +75,7 @@ public class gcdTest {
         }
 
         System.out.printf("정답률 : %f", (correct / TEST_CASES.length * 100));
+
     }
 
 }
