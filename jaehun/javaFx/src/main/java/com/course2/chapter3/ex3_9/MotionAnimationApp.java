@@ -16,7 +16,7 @@ public class MotionAnimationApp extends Application {
         double height = 120;
         MotionFrameCanvas canvas = new MotionFrameCanvas(width, height);
 
-        AnimationTimer anim = new AnimationTimer() {
+        new AnimationTimer() {
             private int frameNum;
             private long startTime = -1;
             private long previousTime;
@@ -31,8 +31,7 @@ public class MotionAnimationApp extends Application {
                     previousTime = now;
                 }
             }
-        };
-        anim.start();
+        }.start();
 
         BorderPane root = new BorderPane(canvas);
         root.setStyle("-fx-border-width: 4px; -fx-border-color: #444");

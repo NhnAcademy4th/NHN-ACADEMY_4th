@@ -6,13 +6,8 @@ import javafx.scene.paint.Color;
 
 public class CheckerboardCanvas extends Canvas {
 
-    private final double width;
-    private final double height;
-
     public CheckerboardCanvas(double width, double height) {
         super(width, height);
-        this.width = width;
-        this.height = height;
     }
 
     public void drawCheckerBoard() {
@@ -25,8 +20,8 @@ public class CheckerboardCanvas extends Canvas {
         for (int i = 0; i < heightNum; i++) {
             for (int j = 0; j < widthNum; j++) {
                 if ((i + j) % 2 == 1) {
-                    double tileWidthSize = width / widthNum;
-                    double tileHeightSize = height / heightNum;
+                    double tileWidthSize = getWidth() / widthNum;
+                    double tileHeightSize = getHeight() / heightNum;
                     g.fillRect(j * tileWidthSize, i * tileHeightSize, tileWidthSize, tileHeightSize);
                 }
             }
