@@ -1,5 +1,6 @@
 package ch08;
 
+import java.math.BigInteger;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,8 +14,7 @@ public class ex8_1 {
      * @return 이차 방정식의 해
      * @throws IllegalArgumentException 2차가 0이거나 판별식이 0보다 작은경우
      */
-    static public double root( double quadraticTerm, double fisrtTerm, double constant )
-            throws IllegalArgumentException {
+    static public double root( double quadraticTerm, double fisrtTerm, double constant ) {
         if (quadraticTerm == 0) {
             throw new IllegalArgumentException("A can't be zero.");
         }

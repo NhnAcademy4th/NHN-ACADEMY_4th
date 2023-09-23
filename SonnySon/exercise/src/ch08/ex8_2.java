@@ -33,6 +33,8 @@ public class ex8_2 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        BigInteger bi = new BigInteger(sc.next());
+        System.out.println(bi);
 
         while(true){
             try{
@@ -43,8 +45,6 @@ public class ex8_2 {
                     break;
 
                 System.out.println("실행 결과 : "+collatzConjecture(userInput));
-            }catch(NumberFormatException e){
-                System.out.println(e.getMessage());
             }
             catch(IllegalArgumentException e){
                 System.out.println(e.getMessage());
