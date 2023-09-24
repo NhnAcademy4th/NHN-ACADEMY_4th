@@ -38,11 +38,11 @@ public class ex8_1 {
         do {
             try{
                 System.out.println("A(2차),B(1차),C(상수) 입력");
-                quadraticTerm = sc.nextDouble();
-                firstTerm = sc.nextDouble();
-                constant = sc.nextDouble();
+                quadraticTerm = Double.parseDouble(sc.nextLine());
+                firstTerm = Double.parseDouble(sc.nextLine());
+                constant = Double.parseDouble(sc.nextLine());
             }catch(InputMismatchException e){
-                System.out.println("InputMismachException : 실수, 또는 정수만 입력 해야 합니다.");
+                System.out.println(e.getMessage());
                 continue;
             }
 
