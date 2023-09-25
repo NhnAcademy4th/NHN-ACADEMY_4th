@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 
 /**
  * ex07_1
