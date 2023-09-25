@@ -4,43 +4,37 @@ import java.util.Arrays;
 
 public class Sort {
 
-    public static int[] sortByMethod(int[] array) {
-        int[] sortedArray = array.clone();
-        Arrays.sort(sortedArray);
-        return sortedArray;
+    private Sort(){}
+
+    public static void sortByMethod(int[] array) {
+        Arrays.sort(array);
     }
 
-    public static String[] sortByMethod(String[] array) {
-        String[] sortedArray = array.clone();
-        Arrays.sort(sortedArray);
-        return sortedArray;
+    public static void sortByMethod(String[] array) {
+        Arrays.sort(array);
     }
 
-    public static String[] sortBySelection(String[] array) {
-        String[] sortedArray = array.clone();
-        for (int i = 0; i < sortedArray.length - 1; i++) {
-            for (int j = i + 1; j < sortedArray.length; j++) {
-                if (sortedArray[i].compareTo(sortedArray[j]) > 0) {
-                    String temp = sortedArray[i];
-                    sortedArray[i] = sortedArray[j];
-                    sortedArray[j] = temp;
+    public static void sortBySelection(String[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i].compareTo(array[j]) > 0) {
+                    String temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                 }
             }
         }
-        return sortedArray;
     }
 
-    public static int[] sortBySelection(int[] array) {
-        int[] sortedArray = array.clone();
-        for (int i = 0; i < sortedArray.length - 1; i++) {
-            for (int j = i + 1; j < sortedArray.length; j++) {
-                if (sortedArray[i] > sortedArray[j]) {
-                    int temp = sortedArray[i];
-                    sortedArray[i] = sortedArray[j];
-                    sortedArray[j] = temp;
+    public static void sortBySelection(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                 }
             }
         }
-        return sortedArray;
     }
 }

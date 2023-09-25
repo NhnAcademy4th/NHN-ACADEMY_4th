@@ -2,7 +2,6 @@ package com.course2.chapter4;
 
 import java.util.List;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -16,61 +15,43 @@ public class Mosaic extends Application {
     private static int mosaicRows;
     private static int mosaicCols;
 
-    public static void open() {
-        open(20, 20, 15, 15);
-    }
-
-    public static void open(int rows, int columns) {
-        open(rows, columns, 15, 15);
-    }
-
     public static void open(int rows, int columns, int blockWidth, int blockHeight) {
         if (window != null) {
             return;
         }
         mosaicRows = rows;
         mosaicCols = columns;
-        new Thread(() -> launch(Mosaic.class,
-                new String[] {"" + rows, "" + columns, "" + blockWidth, "" + blockHeight})).start();
+        String[] str = {"" + rows, "" + columns, "" + blockWidth, "" + blockHeight};
+        new Thread(() -> launch(Mosaic.class, str)).start();
         do {
             delay(100);
         } while (window == null || canvas == null);
     }
 
-    public static void close() {
-        if (window != null) {
-            Platform.runLater(() -> window.close());
-        }
-    }
-
-    public static boolean isOpen() {
-        return (window != null);
-    }
 
     public static void delay(int milliseconds) {
         if (milliseconds > 0) {
             try {
                 Thread.sleep(milliseconds);
             } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+                Thread.currentThread().interrupt();
             }
         }
     }
 
-    public static Color getColor(int row, int col) {
-        if (canvas == null) {
-            return Color.BLACK;
+    private static void throwException(int row,int col){
+        if (row < 0 || row >= mosaicRows || col < 0 || col >= mosaicCols) {
+            throw new IllegalArgumentException("(row,col) = (" + row + "," + col
+                    + ") is not in the mosaic.");
         }
-        return canvas.getColor(row, col);
     }
 
     public static int getRed(int row, int col) {
         if (canvas == null) {
             return 0;
         }
-        if (row < 0 || row >= mosaicRows || col < 0 || col >= mosaicCols) {
-            throw new IllegalArgumentException("(row,col) = (" + row + "," + col
-                    + ") is not in the mosaic.");
-        }
+        throwException(row,col);
         return (int) (255 * canvas.getRed(row, col));
     }
 
@@ -78,10 +59,7 @@ public class Mosaic extends Application {
         if (canvas == null) {
             return 0;
         }
-        if (row < 0 || row >= mosaicRows || col < 0 || col >= mosaicCols) {
-            throw new IllegalArgumentException("(row,col) = (" + row + "," + col
-                    + ") is not in the mosaic.");
-        }
+        throwException(row,col);
         return (int) (255 * canvas.getGreen(row, col));
     }
 
@@ -89,45 +67,16 @@ public class Mosaic extends Application {
         if (canvas == null) {
             return 0;
         }
-        if (row < 0 || row >= mosaicRows || col < 0 || col >= mosaicCols) {
-            throw new IllegalArgumentException("(row,col) = (" + row + "," + col
-                    + ") is not in the mosaic.");
-        }
+        throwException(row,col);
         return (int) (255 * canvas.getBlue(row, col));
-    }
-
-    public static void setColor(int row, int col, Color c) {
-        if (canvas == null) {
-            return;
-        }
-        if (row < 0 || row >= mosaicRows || col < 0 || col >= mosaicCols) {
-            throw new IllegalArgumentException("(row,col) = (" + row + "," + col
-                    + ") is not in the mosaic.");
-        }
-        canvas.setColor(row, col, c);
     }
 
     public static void setColor(int row, int col, int red, int green, int blue) {
         if (canvas == null) {
             return;
         }
-        if (row < 0 || row >= mosaicRows || col < 0 || col >= mosaicCols) {
-            throw new IllegalArgumentException("(row,col) = (" + row + "," + col
-                    + ") is not in the mosaic.");
-        }
+        throwException(row,col);
         canvas.setColor(row, col, red / 255.0, green / 255.0, blue / 255.0);
-    }
-
-    public static void fill(Color c) {
-        canvas.fill(c);
-    }
-
-    public static void fill(int red, int green, int blue) {
-        canvas.fill(red / 255.0, green / 255.0, blue / 255.0);
-    }
-
-    public static void fillRandomly() {
-        canvas.fillRandomly();
     }
 
     public static void setUse3DEffect(boolean use3D) {
@@ -137,11 +86,6 @@ public class Mosaic extends Application {
             canvas.setUse3D(use3DEffect);
         }
     }
-
-    public boolean getUse3DEffect() {
-        return use3DEffect;
-    }
-
 
     public void start(Stage stage) {
         window = stage;
@@ -162,13 +106,9 @@ public class Mosaic extends Application {
         root.setStyle("-fx-border-width: 2px; -fx-border-color: #333");
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setOnCloseRequest(e -> {
-            System.exit(0);
-        });
+        stage.setOnCloseRequest(e -> System.exit(0));
         stage.setTitle("Mosaic");
         stage.setResizable(false);
         stage.show();
     }
-
-
 }

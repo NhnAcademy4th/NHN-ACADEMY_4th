@@ -14,7 +14,7 @@ public class Main {
 
     public static void test() {
         double[] testArray;
-        String[] splitedInput = inputFromShell().split(" ");
+        String[] splitedInput = inputFromShell().split("\\s+");
 
         testArray = Arrays.stream(splitedInput).mapToDouble(Double::parseDouble).toArray();
         System.out.println("original Array : " + Arrays.toString(testArray));
@@ -23,8 +23,8 @@ public class Main {
     }
 
     public static String inputFromShell() {
+        StringBuilder sb = new StringBuilder();
         double num;
-        String numsToString = "";
         while (true) {
             try {
                 num = scanner.nextDouble();
@@ -34,11 +34,11 @@ public class Main {
                 if (num == 0) {
                     break;
                 }
-                numsToString += num + " ";
+                sb.append(num).append(" ");
             } catch (InputMismatchException e) {
                 System.out.println(e.getMessage());
             }
         }
-        return numsToString;
+        return sb.toString();
     }
 }

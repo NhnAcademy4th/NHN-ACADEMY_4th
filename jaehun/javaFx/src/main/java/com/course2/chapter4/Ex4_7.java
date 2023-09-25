@@ -2,11 +2,11 @@ package com.course2.chapter4;
 
 public class Ex4_7 {
 
-    final static int ROWS = 40;
-    final static int COLUMNS = 40;
-    final static int SQUARE_SIZE = 10;
+    static final int ROWS = 40;
+    static final int COLUMNS = 40;
 
     public static void main(String[] args) {
+        final int SQUARE_SIZE = 10;
         Mosaic.setUse3DEffect(false);
         Mosaic.open(ROWS, COLUMNS, SQUARE_SIZE, SQUARE_SIZE);
         fillWithRandomColors();
@@ -30,35 +30,15 @@ public class Ex4_7 {
     }
 
     static void convertRandomNeighbor(int row, int col) {
-        int red = Mosaic.getRed(row,col);
-        int green = Mosaic.getGreen(row,col);
-        int blue = Mosaic.getBlue(row,col);
-        int directionNum = (int)(4*Math.random());
-        switch (directionNum) {
-            case 0:
-                row--;
-                if (row < 0) {
-                    row = ROWS - 1;
-                }
-                break;
-            case 1:
-                col++;
-                if (col >= COLUMNS) {
-                    col = 0;
-                }
-                break;
-            case 2:
-                row++;
-                if (row >= ROWS) {
-                    row = 0;
-                }
-                break;
-            case 3:
-                col--;
-                if (col < 0) {
-                    col = COLUMNS - 1;
-                }
-        }
-        Mosaic.setColor(row,col,red,green,blue);
+        int red = Mosaic.getRed(row, col);
+        int green = Mosaic.getGreen(row, col);
+        int blue = Mosaic.getBlue(row, col);
+
+        int directionNum = (int) (4 * Math.random());
+        int[][] directions = {{0, -1}, {0, 1}, {1, 0}, {-1, 0}};
+        col = (col + directions[directionNum][0] + COLUMNS) % COLUMNS;
+        row = (row + directions[directionNum][1] + ROWS) % ROWS;
+
+        Mosaic.setColor(row, col, red, green, blue);
     }
 }
