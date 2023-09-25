@@ -120,21 +120,21 @@ public class HighLowGUI extends Application {
         int playerCount = playerHand.getCardCount();
         int dealerCount = dealerHand.getCardCount();
 
-        if ( thisCard.getValue() < prevCard.getValue() ) {
-            gameInProgress = false;
-            message = "Too bad! You lose.";
-        }
-        else if ( thisCard.getValue() == prevCard.getValue() ) {
-            gameInProgress = false;
-            message = "Too bad!  You lose on ties.";
-        }
-        else if ( cardCt == 4) {
-            gameInProgress = false;
-            message = "You win!  You made three correct guesses.";
-        }
-        else {
-            message = "Got it right!  Try for " + cardCt + ".";
-        }
+//        if ( thisCard.getValue() < prevCard.getValue() ) {
+//            gameInProgress = false;
+//            message = "Too bad! You lose.";
+//        }
+//        else if ( thisCard.getValue() == prevCard.getValue() ) {
+//            gameInProgress = false;
+//            message = "Too bad!  You lose on ties.";
+//        }
+//        else if ( cardCt == 4) {
+//            gameInProgress = false;
+//            message = "You win!  You made three correct guesses.";
+//        }
+//        else {
+//            message = "Got it right!  Try for " + cardCt + ".";
+//        }
         drawBoard();
     } // end doHigher()
 
@@ -152,9 +152,9 @@ public class HighLowGUI extends Application {
             drawBoard();
             return;
         }
-        if(dealerHand.getBlackjackValue() < 16 ){
-
-        }
+//        if(dealerHand.getBlackjackValue() < 16 ){
+//
+//        }
         dealerHand.addCard( deck.dealCard() );     // Deal a card to the hand.
         int cardCt = dealerHand.getCardCount();
         Card thisCard = dealerHand.getCard( cardCt - 1 );  // Card just dealt.
