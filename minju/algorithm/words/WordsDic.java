@@ -36,6 +36,7 @@ public class WordsDic {
         try (BufferedReader br = new BufferedReader(new FileReader(new File(filePath)))) {
             String line = br.readLine();
             while (!Objects.isNull(line)) {
+                line = line.replace(",", " ");
                 String[] word = line.split("\\s+");
                 line = br.readLine();
                 addWord(word);
@@ -57,8 +58,11 @@ public class WordsDic {
 
         sb = new StringBuilder();
         for (int i = index + 1; i < word.length; i++) {
+            if (word[i].matches("[\\d]*$"))
+                continue;
             sb.append(word[i] + " ");
         }
+
         String value = sb.toString();
 
         dictionary.put(key, value);
