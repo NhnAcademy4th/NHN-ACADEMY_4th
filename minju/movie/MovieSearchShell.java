@@ -1,9 +1,9 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class MovieSearch {
+public class MovieSearchShell {
 
-    private MovieSearch() {
+    private MovieSearchShell() {
     }
 
     public static void startMovieShell() {

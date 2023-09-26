@@ -21,7 +21,7 @@ public class MovieList {
                 break;
             result.add(list.get(i));
         }
-        if (result.size() == 0) {
+        if (result.isEmpty()) {
             throw new IllegalArgumentException("찾는 영화가 없습니다.");
         }
         return result;
