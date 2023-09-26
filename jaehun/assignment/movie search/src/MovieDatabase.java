@@ -1,20 +1,13 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 public class MovieDatabase {
-    private Map<String, Movie> movieDatabase = new HashMap<>();
+
+    private List<Movie> movieDatabase = new ArrayList<>();
 
     private void setMovieDatabase(List<String> processedMovieInfo) {
-        String movieEnglishTitle = processedMovieInfo.get(1);
-        String movieKoreanTitle = processedMovieInfo.get(2);
-        Movie movie = new Movie(processedMovieInfo);
-        if (movieEnglishTitle.isEmpty() || movieKoreanTitle.isEmpty()) {
-            return;
-        }
-        movieDatabase.put(movieEnglishTitle, movie);
-        movieDatabase.put(movieKoreanTitle, movie);
+        movieDatabase.add(new Movie(processedMovieInfo));
     }
 
     public void parse(List<String> readingFile) {
@@ -28,6 +21,7 @@ public class MovieDatabase {
                 System.out.println(e.getMessage());
             }
         }
+        Collections.sort(movieDatabase);
     }
 
     private List<String> parseOneLine(String oneLine, String pattern) {
@@ -50,10 +44,39 @@ public class MovieDatabase {
     }
 
 
-    public Movie getMovieInfo(String movieTitle) {
-        if (!movieDatabase.containsKey(movieTitle)) {
+    public List<Movie> getMovies(String movieTitle) {
+        List<Movie> movieList = new ArrayList<>();
+        int movieIndex = binarySearch(movieTitle);
+
+        boolean hasNoMovieTitle = !movieDatabase.get(movieIndex).getTitle().equals(movieTitle);
+        if (hasNoMovieTitle) {
             throw new IllegalArgumentException("영화가 존재하지 않습니다.");
         }
-        return movieDatabase.get(movieTitle);
+
+        boolean hasDuplicateMovieTitle;
+        do{
+            movieList.add(movieDatabase.get(movieIndex));
+            movieIndex++;
+            hasDuplicateMovieTitle = movieDatabase.get(movieIndex).getTitle().equals(movieTitle);
+        }while(hasDuplicateMovieTitle);
+
+        return movieList;
+    }
+
+
+    private int binarySearch(String movieTitle) {
+        int start = 0;
+        int end = movieDatabase.size() - 1;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            boolean isMoreThaMovieTitle = movieDatabase.get(mid).getTitle().compareTo(movieTitle) >= 0;
+            if (isMoreThaMovieTitle) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return start;
     }
 }

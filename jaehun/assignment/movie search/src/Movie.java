@@ -1,14 +1,16 @@
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
-public class Movie {
+public class Movie implements Comparable<Movie> {
     private static final String[] kindOfInfo =
             {"MovieID", "Title", "KoreanTitle", "Plot", "ReleaseYear", "RunningTime", "GradeID", "GradeInKoreaID",
                     "Poster", "ReleaseDateInKorea", "BoxOfficeWWGross", "BoxOfficeUSGross", "Budget", "OriginalAuthor",
                     "OriginalSource"};
     private Map<String, String> movieInfo = new LinkedHashMap<>();
+
     public Movie(List<String> movieInfoList) {
         if (movieInfoList.size() != kindOfInfo.length) {
             throw new IllegalArgumentException("파싱이 제대로 이루어지지 않았습니다.");
@@ -19,10 +21,24 @@ public class Movie {
         }
     }
 
+    public String getInfo(String info) {
+        return movieInfo.get(info);
+    }
+
+    public String getTitle(){
+        return movieInfo.get("Title");
+    }
+
+
     public void printMovieInfoToShell() {
         Set<String> infos = movieInfo.keySet();
         for (String info : infos) {
             System.out.println(info + " : " + movieInfo.get(info));
         }
+    }
+
+    @Override
+    public int compareTo(Movie anotherMovie) {
+        return getTitle().compareTo(anotherMovie.getTitle());
     }
 }

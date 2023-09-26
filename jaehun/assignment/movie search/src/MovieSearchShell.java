@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Scanner;
 
 public class MovieSearchShell {
@@ -26,14 +27,16 @@ public class MovieSearchShell {
     public static void searchMovie(Scanner scanner) {
         String movieToSearch;
         while (true) {
-            System.out.println("검색할 영화를 입력하세요: (exit()를 입력하면 프로그램이 종료됩니다.)");
+            System.out.print("검색할 영화를 영어 제목으로 입력하세요.(exit()를 입력하면 프로그램이 종료됩니다.) : ");
             movieToSearch = scanner.nextLine();
             if (movieToSearch.equals("exit()")) {
                 System.out.println("프로그램이 종료됩니다.");
                 break;
             }
             try {
-                movieDatabase.getMovieInfo(movieToSearch).printMovieInfoToShell();
+                for(Movie movie : movieDatabase.getMovies(movieToSearch)){
+                    movie.printMovieInfoToShell();
+                }
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
