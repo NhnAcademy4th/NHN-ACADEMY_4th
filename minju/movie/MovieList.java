@@ -14,21 +14,32 @@ public class MovieList {
         Collections.sort(list);
     }
 
-    public Movie getMovie(String title) {
-        int low = 0;
-        int high = list.size() - 1;
+    public List<Movie> getMovie(String title) {
+        List<Movie> result = new ArrayList<>();
+        for (int i = bisection(title); i < list.size(); i++) {
+            if (!list.get(i).getTitle().equals(title))
+                break;
+            result.add(list.get(i));
+        }
+        if (result.size() == 0) {
+            throw new IllegalArgumentException("찾는 영화가 없습니다.");
+        }
+        return result;
+    }
 
-        while (low <= high) {
+    public int bisection(String title) {
+        int low = 0;
+        int high = list.size();
+
+        while (low < high) {
             int mid = (low + high) / 2;
             int value = list.get(mid).getTitle().compareTo(title);
-            if (value == 0)
-                return list.get(mid);
-            else if (value > 0) {
-                high = mid - 1;
+            if (value >= 0) {
+                high = mid;
             } else {
                 low = mid + 1;
             }
         }
-        throw new IllegalArgumentException("찾는 영화가 없습니다.");
+        return low;
     }
 }

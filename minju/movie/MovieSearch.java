@@ -24,7 +24,10 @@ public class MovieSearch {
 
     private static void printMovie(MovieList list, String title) {
         try {
-            System.out.println(list.getMovie(title));
+            for (Movie movie : list.getMovie(title)) {
+                System.out.println(movie);
+                System.out.println();
+            }
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }

@@ -3,21 +3,21 @@ import java.util.List;
 
 public class Movie implements Comparable<Movie> {
 
-    private int id;
-    private String title;
-    private String korTitle;
-    private String plot;
-    private int releaseYear;
-    private int runningTime;
-    private int gradeID;
-    private int gradeInKoreaID;
-    private String poster;
-    private String releaseDateInKorea;
-    private long boxOfficeWWGross;
-    private long boxOfficeUSGross;
-    private int budget;
-    private String originalAuthor;
-    private String originalSource;
+    private final int id;
+    private final String title;
+    private final String korTitle;
+    private final String plot;
+    private final int releaseYear;
+    private final int runningTime;
+    private final int gradeID;
+    private final int gradeInKoreaID;
+    private final String poster;
+    private final String releaseDateInKorea;
+    private final long boxOfficeWWGross;
+    private final long boxOfficeUSGross;
+    private final int budget;
+    private final String originalAuthor;
+    private final String originalSource;
 
     public Movie(List<String> information) {
 
@@ -26,31 +26,43 @@ public class Movie implements Comparable<Movie> {
         }
 
         this.id = Integer.valueOf(information.get(0));
+
         this.title = information.get(1);
+        if (title.isEmpty()) {
+            throw new IllegalArgumentException("영문 제목은 빈칸으로 둘 수 없습니다.");
+        }
         this.korTitle = information.get(2);
         this.plot = information.get(3);
 
-        if (!information.get(4).isEmpty())
-            this.releaseYear = Integer.valueOf(information.get(4));
-        if (!information.get(5).isEmpty())
-            this.runningTime = Integer.valueOf(information.get(5));
-        if (!information.get(6).isEmpty())
-            this.gradeID = Integer.valueOf(information.get(6));
-        if (!information.get(7).isEmpty())
-            this.gradeInKoreaID = Integer.valueOf(information.get(7));
+        this.releaseYear = stringToIntValue(information.get(4));
+
+        this.runningTime = stringToIntValue(information.get(5));
+
+        this.gradeID = stringToIntValue(information.get(6));
+
+        this.gradeInKoreaID = stringToIntValue(information.get(4));
 
         this.poster = information.get(8);
         this.releaseDateInKorea = information.get(9);
 
-        if (!information.get(10).isEmpty())
-            this.boxOfficeWWGross = Long.parseLong(information.get(10));
-        if (!information.get(11).isEmpty())
-            this.boxOfficeUSGross = Long.parseLong(information.get(11));
-        if (!information.get(12).isEmpty())
-            this.budget = Integer.valueOf(information.get(12));
+        this.boxOfficeWWGross = stringToLongValue(information.get(10));
+        this.boxOfficeUSGross = stringToLongValue(information.get(11));
+        this.budget = stringToIntValue(information.get(12));
         this.originalAuthor = information.get(13);
         this.originalSource = information.get(14);
 
+    }
+
+    private int stringToIntValue(String value) {
+        if (value.isEmpty())
+            return 0;
+        return Integer.parseInt(value);
+    }
+
+    private long stringToLongValue(String value) {
+        if (value.isEmpty())
+            return 0;
+        return Long.parseLong(value);
     }
 
     @Override
