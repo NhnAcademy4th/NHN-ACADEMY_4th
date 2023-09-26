@@ -21,7 +21,6 @@ public class MovieList {
         while (low <= high) {
             int mid = (low + high) / 2;
             int value = list.get(mid).getTitle().compareTo(title);
-
             if (value == 0)
                 return list.get(mid);
             else if (value > 0) {
@@ -30,7 +29,6 @@ public class MovieList {
                 low = mid + 1;
             }
         }
-
         throw new IllegalArgumentException("찾는 영화가 없습니다.");
     }
 }

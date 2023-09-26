@@ -11,6 +11,9 @@ import java.util.Objects;
  */
 public class MovieParser {
 
+    private MovieParser() {
+    }
+
     public static MovieList load(String filepath) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(new File(filepath)))) {
             String line = br.readLine();
@@ -21,6 +24,7 @@ public class MovieParser {
                     line += br.readLine().split("                    See full summary&nbsp;&raquo;")[1];
                 }
                 List<String> information = parse(line);
+
                 list.add(new Movie(information));
                 line = br.readLine();
             }
@@ -35,11 +39,24 @@ public class MovieParser {
         for (String token : tokens) {
             sb.append(token);
             if (sb.toString().matches("^(?:\".*?\"|(?!\"|.*\"$).*)")) {
-                information.add(sb.toString());
+                information.add(preprocessing(sb.toString()));
                 sb.setLength(0);
             }
         }
         return information;
+    }
+
+    public static String preprocessing(String line) {
+        String result = line;
+        if (result.isEmpty())
+            return result;
+        if (line.charAt(0) == '\"' && line.charAt(line.length() - 1) == '\"') {
+            result = line.substring(1, line.length() - 1);
+        }
+        if (result.equals("NULL")) {
+            return "";
+        }
+        return result;
     }
 
 }

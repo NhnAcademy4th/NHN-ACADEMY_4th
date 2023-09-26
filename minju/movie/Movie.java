@@ -4,7 +4,8 @@ import java.util.List;
 public class Movie implements Comparable<Movie> {
 
     private int id;
-    private MovieTitle title;
+    private String title;
+    private String korTitle;
     private String plot;
     private int releaseYear;
     private int runningTime;
@@ -25,27 +26,28 @@ public class Movie implements Comparable<Movie> {
         }
 
         this.id = Integer.valueOf(information.get(0));
-        title = new MovieTitle(information.get(1), information.get(2));
-
+        this.title = information.get(1);
+        this.korTitle = information.get(2);
         this.plot = information.get(3);
-        if (!plot.isEmpty())
-            plot = plot.substring(1, plot.length());
 
-        this.releaseYear = Integer.valueOf(information.get(4));
-        this.runningTime = Integer.valueOf(information.get(5));
-
-        this.gradeID = Integer.valueOf(information.get(6));
-
-        if (information.get(7).equals("NULL"))
-            this.gradeInKoreaID = 0;
-        else
+        if (!information.get(4).isEmpty())
+            this.releaseYear = Integer.valueOf(information.get(4));
+        if (!information.get(5).isEmpty())
+            this.runningTime = Integer.valueOf(information.get(5));
+        if (!information.get(6).isEmpty())
+            this.gradeID = Integer.valueOf(information.get(6));
+        if (!information.get(7).isEmpty())
             this.gradeInKoreaID = Integer.valueOf(information.get(7));
 
         this.poster = information.get(8);
         this.releaseDateInKorea = information.get(9);
-        this.boxOfficeWWGross = Long.parseLong(information.get(10));
-        this.boxOfficeUSGross = Long.parseLong(information.get(11));
-        this.budget = Integer.valueOf(information.get(12));
+
+        if (!information.get(10).isEmpty())
+            this.boxOfficeWWGross = Long.parseLong(information.get(10));
+        if (!information.get(11).isEmpty())
+            this.boxOfficeUSGross = Long.parseLong(information.get(11));
+        if (!information.get(12).isEmpty())
+            this.budget = Integer.valueOf(information.get(12));
         this.originalAuthor = information.get(13);
         this.originalSource = information.get(14);
 
@@ -59,7 +61,9 @@ public class Movie implements Comparable<Movie> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(title);
+        sb.append("Title : " + title + "\n");
+        sb.append("Korean Title : " + korTitle + "\n");
+        sb.append("Poster : " + poster + "\n");
         sb.append("Release year : " + releaseYear + "\n");
         sb.append("Running time : " + runningTime + "\n");
         sb.append("Grade : " + gradeID + "\n");
@@ -74,7 +78,7 @@ public class Movie implements Comparable<Movie> {
         return sb.toString();
     }
 
-    public MovieTitle getTitle() {
+    public String getTitle() {
         return title;
     }
 
