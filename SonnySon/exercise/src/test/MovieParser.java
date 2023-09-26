@@ -2,27 +2,34 @@ package test;
 
 import java.io.*;
 import java.util.*;
-import java.util.regex.Pattern;
 
 public class MovieParser {
+    ArrayList<Movie> movieList;
 
-    public static Map<String,Movie> movieParsing(){
-        List<String> csvList = readCSV("Movie.csv");
+    public MovieParser(String movieName) throws IOException {
+        movieList = movieParsing(movieName);
+    }
+
+    public ArrayList<Movie> getMovieList() {
+        return movieList;
+    }
+
+    public ArrayList<Movie> movieParsing(String fileName) throws IOException {
+        List<String> csvList = readCSV(fileName);
 
         Iterator<String> movies = csvList.iterator();
 
-        Map<String,Movie> result = new TreeMap<>();
+        ArrayList<Movie> result = new ArrayList<>();
 
         movies.next();
         while(movies.hasNext()){
             List<String> line = parseLine(movies.next());
             Movie movie = createMovieInstance(line);
-            result.put(movie.getTitle(),movie);
-            result.put(movie.getKoreanTitle(),movie);
+            result.add(movie);
             }
         return result;
     }
-    private static List<String> parseLine(String movieRawInfo) {
+    private List<String> parseLine(String movieRawInfo) {
         String[] splitedMovieRawInfo = movieRawInfo.split(",");
         List<String> processedMovieInfo = new ArrayList<>();
 
@@ -40,7 +47,7 @@ public class MovieParser {
         return processedMovieInfo;
     }
 
-    private static Movie createMovieInstance(List<String> data) {
+    private Movie createMovieInstance(List<String> data) {
         String collons = "^\"|\"$";
 
         String title = data.get(1).replaceAll(collons,"");
@@ -63,35 +70,24 @@ public class MovieParser {
             poster, releaseDateInKorea, boxOfficeWWGross, boxOfficeUSGross, budget, originalAuthor, originalSource);
     }
 
-    public static List<String> readCSV(String fileName){
+    public List<String> readCSV(String fileName) throws IOException {
         List<String> csvList = new ArrayList<>();
         String path = MovieParser.class.getResource("").getPath();
         File csv = new File(path + "resource/"+fileName);
-        BufferedReader br = null;
-        String line = "";
 
-        try{
-            br = new BufferedReader(new FileReader(csv));
-            while((line = br.readLine()) != null){
-                if(line.endsWith("...")){
+        String line = "";
+        try (BufferedReader br = new BufferedReader(new FileReader(csv))) {
+            while ((line = br.readLine()) != null) {
+                if (line.endsWith("...")) {
                     csvList.add(line + br.readLine());
                     continue;
                 }
                 csvList.add(line);
             }
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
-        }catch(IOException e){
-            e.printStackTrace();
-        }finally {
-            try{
-                if(br != null){
-                    br.close();
-                }
-        }catch (IOException e){
-                e.printStackTrace();
-            }
         }
+
+
+
         return csvList;
     }
 

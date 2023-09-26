@@ -1,14 +1,17 @@
 package test;
 
-import java.io.FileNotFoundException;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 public class Theater {
-    public static void main(String[] args){
-        Map<String,Movie> movieList = MovieParser.movieParsing();
+    ArrayList<Movie> movieList;
 
+    public Theater(){
+        defineMovie();
+        searchByMovieName();
+    }
+
+    public void searchByMovieName(){
         Scanner sc = new Scanner(System.in);
 
         while(true){
@@ -19,11 +22,60 @@ public class Theater {
                 break;
             }
 
-            if(movieList.get(userInput) != null){
-                System.out.println("찾는 결과 : "+userInput);
-                System.out.println(movieList.get(userInput).toString());
-            }else
-                System.out.println("찾는 결과가 없습니다.");
+            movieList.sort((o1, o2) -> compareWord(o1.getTitle(), o2.getTitle()));
+
+            findWord(userInput,0,movieList.size());
+
         }
+        sc.close();
+    }
+
+    private void findWord(String userInput,int start,int end) {
+        int pivot = (start+end)/2;
+        int result = compareWord(userInput,movieList.get(pivot).getTitle());
+
+        switch (result){
+            case 0:
+                System.out.println(movieList.get(pivot).toString());
+                break;
+            case -1:
+                findWord(userInput,start,pivot);
+                break;
+            case 1:
+                findWord(userInput,pivot,end);
+                break;
+        }
+    }
+
+    private static int compareWord(String word1, String word2) {
+        char[] charArray1 = word1.toCharArray();
+        char[] charArray2 = word2.toCharArray();
+
+        int shortWordLength = Math.min(charArray1.length, charArray2.length);
+
+        for(int i = 0; i < shortWordLength; i++) {
+            if(charArray1[i] != charArray2[i]){
+                return charArray1[i] < charArray2[i]? -1 : 1;
+            }
+        }
+        return 0;
+    }
+
+
+
+    public void defineMovie(){
+        MovieParser movieParser = null;
+
+        try{
+            movieParser = new MovieParser("Movie.csv");
+        }catch(IOException e){
+            System.out.println("파일경로 에러");
+        }
+
+        movieList = movieParser.getMovieList();
+    }
+
+    public static void main(String[] args){
+        Theater theater = new Theater();
     }
 }

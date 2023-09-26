@@ -8,10 +8,6 @@ public class Dictionary {
 
     private Map<String,Set<String>> dictionary = new TreeMap<>();
 
-    public Dictionary() throws FileNotFoundException {
-        registryDictionary("words.txt");
-    }
-
     public Dictionary(String fileName) throws FileNotFoundException {
         registryDictionary(fileName);
     }
@@ -56,14 +52,13 @@ public class Dictionary {
         Dictionary dictionary = null;
 
         try{
-            dictionary = new Dictionary();
+            dictionary = new Dictionary("words.txt");
         }catch(FileNotFoundException e){
             System.out.println(e.getMessage());
         }
 
         while(true){
             System.out.println("검색할 단어 입력 (종료 = enter)");
-            System.out.print("?");
             String userInputWord = sc.nextLine();
 
             if(userInputWord.isEmpty()){
