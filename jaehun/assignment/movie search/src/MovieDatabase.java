@@ -70,8 +70,8 @@ public class MovieDatabase {
 
         while (start <= end) {
             int mid = (start + end) / 2;
-            boolean isMoreThaMovieTitle = movieDatabase.get(mid).getTitle().compareTo(movieTitle) >= 0;
-            if (isMoreThaMovieTitle) {
+            boolean isMoreThanMovieTitle = movieDatabase.get(mid).getTitle().compareTo(movieTitle) >= 0;
+            if (isMoreThanMovieTitle) {
                 end = mid - 1;
             } else {
                 start = mid + 1;
