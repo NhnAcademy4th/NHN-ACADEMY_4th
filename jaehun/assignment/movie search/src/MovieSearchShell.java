@@ -8,21 +8,17 @@ public class MovieSearchShell {
     private static MovieDatabase movieDatabase = new MovieDatabase();
 
     public static void main(String[] args) {
-        generateMovieDatabase();
-        Scanner scanner = new Scanner(System.in);
-        searchMovie(scanner);
-        scanner.close();
-    }
-
-    public static void generateMovieDatabase() {
         final String FILE_PATH = "./src/Movie.csv";
         try {
             movieDatabase.parse(loadFile(FILE_PATH));
         } catch (FileNotFoundException e) {
             System.out.println("파일을 찾을 수 없습니다.");
-            System.exit(0);
         }
+        Scanner scanner = new Scanner(System.in);
+        searchMovie(scanner);
+        scanner.close();
     }
+
 
     public static List<String> loadFile(String filePath) throws FileNotFoundException {
         Scanner reader = new Scanner(new File(filePath));
