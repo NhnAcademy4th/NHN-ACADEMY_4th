@@ -8,7 +8,19 @@ import java.util.Scanner;
 public class MovieSearchShell {
     private MovieDatabase movieDatabase = new MovieDatabase();
 
-    public void loadFile(String filePath) throws IOException {
+    public void start(){
+        final String FILE_PATH = "./src/Movie.csv";
+
+        try {
+            loadFile(FILE_PATH);
+        } catch (IOException e) {
+            System.out.println("파일을 찾을 수 없습니다.");
+        }
+
+        searchMovie();
+    }
+
+    private void loadFile(String filePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         List<String> lines = new ArrayList<>();
         reader.readLine();
@@ -24,7 +36,7 @@ public class MovieSearchShell {
         movieDatabase.parse(lines);
     }
 
-    public void searchMovie() {
+    private void searchMovie() {
         Scanner scanner = new Scanner(System.in);
         String movieToSearch;
         while (true) {
