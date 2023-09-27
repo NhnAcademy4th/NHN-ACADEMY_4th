@@ -1,23 +1,23 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class MovieSearchShell {
     private MovieDatabase movieDatabase = new MovieDatabase();
 
-    public void start(){
+    public void start() {
         final String FILE_PATH = "./src/Movie.csv";
 
         try {
             loadFile(FILE_PATH);
+            searchMovie();
         } catch (IOException e) {
             System.out.println("파일을 찾을 수 없습니다.");
         }
 
-        searchMovie();
     }
 
     private void loadFile(String filePath) throws IOException {
@@ -36,12 +36,12 @@ public class MovieSearchShell {
         movieDatabase.parse(lines);
     }
 
-    private void searchMovie() {
-        Scanner scanner = new Scanner(System.in);
+    private void searchMovie() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String movieToSearch;
         while (true) {
             System.out.print("검색할 영화를 영어 제목으로 입력하세요.(exit()를 입력하면 프로그램이 종료됩니다.) : ");
-            movieToSearch = scanner.nextLine();
+            movieToSearch = reader.readLine();
             if (movieToSearch.equals("exit()")) {
                 System.out.println("프로그램이 종료됩니다.");
                 break;
@@ -54,6 +54,6 @@ public class MovieSearchShell {
                 System.out.println(e.getMessage());
             }
         }
-        scanner.close();
+        reader.close();
     }
 }
