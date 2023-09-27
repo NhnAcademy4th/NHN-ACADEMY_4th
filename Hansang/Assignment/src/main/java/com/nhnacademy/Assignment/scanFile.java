@@ -9,7 +9,10 @@ import java.util.Scanner;
 public class scanFile {
 
     public static List<String> parse(String fileName) throws IOException {
-        Scanner scanner = new Scanner(new File(fileName));
+        String path = System.getProperty("user.dir");
+        File file = new File(path + "/src/main/resources/" + fileName);
+
+        Scanner scanner = new Scanner(file);
         List<String> parsedLines = new ArrayList<>();
         String str;
         str = scanner.nextLine();

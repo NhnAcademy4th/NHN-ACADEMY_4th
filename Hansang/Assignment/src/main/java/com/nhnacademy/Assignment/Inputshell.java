@@ -1,4 +1,4 @@
-package com.nhnacademy.Assignment.resource;
+package com.nhnacademy.Assignment;
 
 import java.util.Scanner;
 
