@@ -1,41 +1,31 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class MovieSearchShell {
-    private static MovieDatabase movieDatabase = new MovieDatabase();
+    private MovieDatabase movieDatabase = new MovieDatabase();
 
-    public static void main(String[] args) {
-        final String FILE_PATH = "./src/Movie.csv";
-        try {
-            movieDatabase.parse(loadFile(FILE_PATH));
-        } catch (FileNotFoundException e) {
-            System.out.println("파일을 찾을 수 없습니다.");
-        }
-        Scanner scanner = new Scanner(System.in);
-        searchMovie(scanner);
-        scanner.close();
-    }
-
-
-    public static List<String> loadFile(String filePath) throws FileNotFoundException {
-        Scanner reader = new Scanner(new File(filePath));
+    public void loadFile(String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
         List<String> lines = new ArrayList<>();
-        reader.nextLine();
-        while (reader.hasNext()) {
-            StringBuilder line = new StringBuilder(reader.nextLine());
+        reader.readLine();
+        String tempLine;
+        while ((tempLine = reader.readLine()) != null) {
+            StringBuilder line = new StringBuilder(tempLine);
             if (line.toString().endsWith("...")) {
-                line.append(reader.nextLine());
+                line.append(reader.readLine());
             }
             lines.add(line.toString());
         }
         reader.close();
-        return lines;
+        movieDatabase.parse(lines);
     }
 
-    public static void searchMovie(Scanner scanner) {
+    public void searchMovie() {
+        Scanner scanner = new Scanner(System.in);
         String movieToSearch;
         while (true) {
             System.out.print("검색할 영화를 영어 제목으로 입력하세요.(exit()를 입력하면 프로그램이 종료됩니다.) : ");
@@ -52,5 +42,6 @@ public class MovieSearchShell {
                 System.out.println(e.getMessage());
             }
         }
+        scanner.close();
     }
 }

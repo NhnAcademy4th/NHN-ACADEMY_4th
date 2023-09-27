@@ -1,14 +1,13 @@
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Movie implements Comparable<Movie> {
     private static final String[] kindOfInfo =
             {"MovieID", "Title", "KoreanTitle", "Plot", "ReleaseYear", "RunningTime", "GradeID", "GradeInKoreaID",
                     "Poster", "ReleaseDateInKorea", "BoxOfficeWWGross", "BoxOfficeUSGross", "Budget", "OriginalAuthor",
                     "OriginalSource"};
-    private Map<String, String> movieInfo = new LinkedHashMap<>();
+    private Map<String, String> movieInfo = new HashMap<>();
 
     public Movie(List<String> movieInfoList) {
         if (movieInfoList.size() != kindOfInfo.length) {
@@ -30,8 +29,7 @@ public class Movie implements Comparable<Movie> {
 
 
     public void printMovieInfoToShell() {
-        Set<String> infos = movieInfo.keySet();
-        for (String info : infos) {
+        for (String info : kindOfInfo) {
             System.out.println(info + " : " + movieInfo.get(info));
         }
     }

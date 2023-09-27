@@ -6,7 +6,7 @@ public class MovieDatabase {
 
     private List<Movie> movieDatabase = new ArrayList<>();
 
-    private void setMovieDatabase(List<String> processedMovieInfo) {
+    private void addMovie(List<String> processedMovieInfo) {
         movieDatabase.add(new Movie(processedMovieInfo));
     }
 
@@ -16,7 +16,7 @@ public class MovieDatabase {
         for (String oneLine : readingFile) {
             List<String> processedMovieInfo = parseOneLine(oneLine, pattern);
             try {
-                setMovieDatabase(processedMovieInfo);
+                addMovie(processedMovieInfo);
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -54,11 +54,11 @@ public class MovieDatabase {
         }
 
         boolean hasDuplicateMovieTitle;
-        do{
+        do {
             movieList.add(movieDatabase.get(movieIndex));
             movieIndex++;
             hasDuplicateMovieTitle = movieDatabase.get(movieIndex).getTitle().equals(movieTitle);
-        }while(hasDuplicateMovieTitle);
+        } while (hasDuplicateMovieTitle);
 
         return movieList;
     }
