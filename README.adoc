@@ -5,7 +5,7 @@
 * Member : 
 https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/SonnySon/exercise[손병민], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/Hansang[이한상], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jiwon[홍지원], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/jaehun[최재훈], https://github.com/NhnAcademy4th/NHN-ACADEMY_4th/tree/develop/minju[김민주]
 
-* **_스타크래프트 추석 과제_** : https://github.com/ks00919/star-craft[김민주], https://github.com/nuheajiohc/starcraft[최재훈]
+* **_스타크래프트 추석 과제_** : https://github.com/ks00919/star-craft[김민주], https://github.com/nuheajiohc/starcraft[최재훈], https://github.com/HanL33/consol_Star[이한상]
 
 
 * **__하루에 Chapter 1개씩 끝내는것을 목표__**
