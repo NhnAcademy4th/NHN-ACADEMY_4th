@@ -78,30 +78,46 @@ public class StatCalc {
 
         StringBuilder sb = new StringBuilder();
 
-        sb.append("count : " + this.getCount() + "\n");
-        sb.append("sum : " + this.getSum() + "\n");
+        sb.append("count : ");
+        sb.append(this.getCount());
+        sb.append("\n");
 
+        sb.append("sum : ");
+        sb.append(this.getSum());
+        sb.append("\n");
+
+        sb.append("max : ");
         try {
-            sb.append("max : " + this.getMax() + "\n");
+            sb.append(this.getMax());
+            sb.append("\n");
         } catch (IllegalArgumentException e) {
-            sb.append("max : " + e.getMessage() + "\n");
+            sb.append(e.getMessage());
+            sb.append("\n");
         }
 
+        sb.append("min : ");
         try {
-            sb.append("min : " + this.getMin() + "\n");
+            sb.append(this.getMin());
+            sb.append("\n");
         } catch (IllegalArgumentException e) {
-            sb.append("min : " + e.getMessage() + "\n");
+            sb.append(e.getMessage());
+            sb.append("\n");
         }
 
+        sb.append("average : ");
         try {
-            sb.append("average : " + this.getMean() + "\n");
+            sb.append(this.getMean());
+            sb.append("\n");
         } catch (IllegalArgumentException e) {
-            sb.append("average : " + e.getMessage() + "\n");
+            sb.append(e.getMessage());
+            sb.append("\n");
         }
+
+        sb.append("Standard Deviation : ");
         try {
-            sb.append("Standard Deviation : " + this.getStandardDeviation());
+            sb.append(this.getStandardDeviation());
         } catch (IllegalArgumentException e) {
-            sb.append("Standard Deviation : " + e.getMessage());
+            sb.append(e.getMessage());
         }
         return sb.toString();
     }
