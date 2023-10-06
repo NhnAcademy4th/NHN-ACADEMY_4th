@@ -1,5 +1,0 @@
-APPLE
-APPLE
-GRAPE
-NaN
-Hey, HI
