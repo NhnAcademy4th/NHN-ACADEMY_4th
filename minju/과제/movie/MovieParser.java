@@ -20,7 +20,7 @@ public class MovieParser {
             line = br.readLine();
             MovieList list = new MovieList();
             while (!Objects.isNull(line)) {
-                if (line.substring(line.length() - 3).equals("...")) {
+                if (line.endsWith("...")) {
                     line += br.readLine().split("                    See full summary&nbsp;&raquo;")[1];
                 }
                 List<String> information = parse(line);
