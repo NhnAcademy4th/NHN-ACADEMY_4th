@@ -24,7 +24,9 @@ public class MovieParser {
                     line += br.readLine().split("                    See full summary&nbsp;&raquo;")[1];
                 }
                 List<String> information = parse(line);
-
+                if (information.size() != 15) {
+                    throw new IllegalArgumentException("데이터의 개수는 15개이어야 합니다.");
+                }
                 list.add(new Movie(information));
                 line = br.readLine();
             }

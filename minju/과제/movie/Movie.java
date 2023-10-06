@@ -21,10 +21,6 @@ public class Movie implements Comparable<Movie> {
 
     public Movie(List<String> information) {
 
-        if (information.size() != 15) {
-            throw new IllegalArgumentException("잘못된 정보가 입력되었습니다.");
-        }
-
         this.id = Integer.parseInt(information.get(0));
 
         this.title = information.get(1);
@@ -47,7 +43,9 @@ public class Movie implements Comparable<Movie> {
 
         this.boxOfficeWWGross = stringToLongValue(information.get(10));
         this.boxOfficeUSGross = stringToLongValue(information.get(11));
+
         this.budget = stringToIntValue(information.get(12));
+
         this.originalAuthor = information.get(13);
         this.originalSource = information.get(14);
 
