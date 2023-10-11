@@ -9,12 +9,12 @@ public class MovieList {
         list = new ArrayList<>();
     }
 
-    public void add(Movie value) {
-        list.add(value);
+    public void add(Movie movie) {
+        list.add(movie);
         Collections.sort(list);
     }
 
-    public List<Movie> getMovie(String title) {
+    public List<Movie> searchMovie(String title) {
         List<Movie> result = new ArrayList<>();
         for (int i = bisection(title); i < list.size(); i++) {
             if (!list.get(i).getTitle().equals(title))
@@ -27,7 +27,7 @@ public class MovieList {
         return result;
     }
 
-    public int bisection(String title) {
+    private int bisection(String title) {
         int low = 0;
         int high = list.size();
 
