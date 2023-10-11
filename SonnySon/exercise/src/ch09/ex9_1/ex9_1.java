@@ -1,4 +1,4 @@
-package ch09;
+package ch09.ex9_1;
 
 import java.math.BigInteger;
 public class ex9_1 {
