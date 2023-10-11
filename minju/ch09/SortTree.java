@@ -53,13 +53,12 @@ public class SortTree<T extends Comparable<T>> {
     }
 
     public int countNodes(TreeNode<T> node) {
-        if (node == null) {
+        if (Objects.isNull(node))
             return 0;
-        } else {
-            int leftCount = countNodes(node.left);
-            int rightCount = countNodes(node.right);
-            return 1 + leftCount + rightCount;
-        }
+        int leftCount = countNodes(node.left);
+        int rightCount = countNodes(node.right);
+        return 1 + leftCount + rightCount;
+
     }
 
     public TreeNode<T> getRoot() {
