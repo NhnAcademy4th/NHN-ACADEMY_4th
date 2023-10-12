@@ -1,12 +1,11 @@
 package ch09.ex9_2;
 
-public class BinaryTree<T extends Comparable<? super T>>{
+public class BinaryTree<T extends Comparable<T>>{
     protected TreeNode root;
     protected class TreeNode{
         public T item;
         public TreeNode left;
         public TreeNode right;
-
         public TreeNode(T str){item =str;}
 
     }
