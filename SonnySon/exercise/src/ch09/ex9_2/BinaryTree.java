@@ -6,6 +6,7 @@ public class BinaryTree<T extends Comparable<T>>{
         public T item;
         public TreeNode left;
         public TreeNode right;
+
         public TreeNode(T str){item =str;}
 
     }

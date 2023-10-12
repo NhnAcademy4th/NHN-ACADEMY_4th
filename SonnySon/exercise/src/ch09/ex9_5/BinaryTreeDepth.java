@@ -2,12 +2,15 @@ package ch09.ex9_5;
 
 import ch09.ex9_2.BinaryTree;
 
+
 public class BinaryTreeDepth<T extends Comparable<T>> extends BinaryTree<T> {
-    int maxDept = 0;
+
+  int maxDept = 0;
 
     public int getMaxDept(){
         return maxDept;
     }
+
 
     public int getReapCount(){
         if(root == null) return 0;
