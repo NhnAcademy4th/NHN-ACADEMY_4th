@@ -2,7 +2,8 @@ package ch09.ex9_4;
 
 import ch09.ex9_2.BinaryTree;
 
-public class BinaryTreeUpgrade<T extends Comparable<? super T>> extends BinaryTree<T> {
+
+public class BinaryTreeUpgrade<T extends Comparable<T>> extends BinaryTree<T> {
 
 //      Add the root node to an empty queue
 //          while the queue is not empty:

@@ -9,5 +9,7 @@ public class MainTest {
             binaryTreeDepth.treeInsert(Math.random()*1000);
         }
         System.out.println(binaryTreeDepth.countNodes());
+        System.out.println(binaryTreeDepth.getReapCount());
+        System.out.println(binaryTreeDepth.sumOfLeafDepths());
     }
 }
