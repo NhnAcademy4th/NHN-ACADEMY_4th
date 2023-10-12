@@ -9,10 +9,11 @@
 |Chapter 3 | -
 |Chapter 4 | -
 |Chapter 5 | -
-|Chapter 6 | 9번까지 풀이
-|Chapter 7 | JavaFx 문제 풀어야함
+|Chapter 6 | -
+|Chapter 7 | -
 |Chapter 8 | 2번까지 풀이
-|Chapter 9 | 4번까지 풀이
+|Chapter 9 | 6번까지 풀이
+|Chapter 10 |
 |===
     JavaFx 문제는 javaFxEx 폴더에 있습니다.
 
