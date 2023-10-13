@@ -1,7 +1,6 @@
 package starcraft;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 import starcraft.unit.*;
@@ -10,8 +9,8 @@ import starcraft.unit.terran.*;
 import starcraft.unit.protos.*;
 
 public class StarcraftExcute {
-    static Scanner sc = new Scanner(System.in);
 
+    static Scanner sc = new Scanner(System.in);
     static ArrayList<Unit> myUnitList;
     static ArrayList<Unit> computerUnitList;
     private static Brood selectBrood(){
