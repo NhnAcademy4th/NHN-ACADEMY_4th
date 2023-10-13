@@ -91,7 +91,7 @@ public class SimpleParser {
 
     private ExpNode factorTree() throws ParseException {
         String term = values[++count];
-        if (term.matches("\\d+")) {
+        if (term.matches("-?\\d+")) {
             return new ConstNode(Double.parseDouble(term));
         } else if (term.equalsIgnoreCase("x")) {
             return new VariableNode();
