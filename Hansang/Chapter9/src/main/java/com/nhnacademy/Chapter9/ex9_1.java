@@ -9,11 +9,11 @@ public class ex9_1 {
     }
 
     private static BigInteger fibonacci(BigInteger number) {
-        boolean isFirstorsecond = (number.equals(BigInteger.ONE) || number.equals(BigInteger.TWO));
+        boolean isValidRange = (number.equals(BigInteger.ONE) || number.equals(BigInteger.TWO));
         if (isZero(number)) {
             return BigInteger.ZERO;
         }
-        if (isFirstorsecond) {
+        if (isValidRange) {
             return BigInteger.ONE;
         }
         return fibonacci(number.subtract(BigInteger.ONE)).add(fibonacci(number.subtract(BigInteger.TWO)));
@@ -61,7 +61,7 @@ public class ex9_1 {
         String init = null;
         BigInteger result;
 
-        initLine();
+        System.out.println("Please enter function between Fibonacci or Factorial!");
         try {
             init = Inputshell.inputFromShell("please input number >> ");
         } catch (Exception e) {
@@ -70,16 +70,8 @@ public class ex9_1 {
 
         result = selectMod(init);
 
-        resultLine(result);
+        System.out.println("result : " + result);
         Inputshell.scannerClose();
-    }
-
-    private static void resultLine(BigInteger value) {
-        System.out.println("result : " + value);
-    }
-
-    private static void initLine() {
-        System.out.println("Please enter function between Fibonacci or Factorial!");
     }
 
 }

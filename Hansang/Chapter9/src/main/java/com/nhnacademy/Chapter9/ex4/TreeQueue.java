@@ -19,10 +19,9 @@ public class TreeQueue {
         if (front == null) {
             front = node;
             rear = node;
-        } else {
-            rear.next = node;
-            rear = node;
         }
+        rear.next = node;
+        rear = node;
     }
 
     public TreeNode popQueue() {

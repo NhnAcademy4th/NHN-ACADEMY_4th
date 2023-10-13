@@ -24,9 +24,8 @@ public class ListNode {
             if (node.next == null) {
                 node.next = new ListNode(number);
                 return;
-            } else {
-                node = node.next;
             }
+            node = node.next;
         }
     }
 

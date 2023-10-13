@@ -9,6 +9,9 @@ public class Inputshell {
         System.out.print(str);
         String value = sc.nextLine();
         value = value.stripLeading();
+        if (value == "") {
+            return "\n";
+        }
         return value;
     }
 

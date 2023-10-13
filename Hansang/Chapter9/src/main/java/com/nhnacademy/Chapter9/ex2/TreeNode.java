@@ -11,7 +11,7 @@ public class TreeNode {
     private TreeNode right;
     private static TreeNode root;
 
-    private static int depth;
+    private static int MAX_DEPTH;
 
     public TreeNode(String item) {
         this.item = item;
@@ -37,16 +37,14 @@ public class TreeNode {
                 if (node.left == null) {
                     node.left = new TreeNode(str);
                     return;
-                } else {
-                    node = node.left;
                 }
+                node = node.left;
             } else {
                 if (node.right == null) {
                     node.right = new TreeNode(str);
                     return;
-                } else {
-                    node = node.right;
                 }
+                node = node.right;
             }
         }
     }
@@ -58,9 +56,8 @@ public class TreeNode {
             return true;
         } else if (item.compareTo(root.item) < 0) {
             return containTree(root.left, item);
-        } else {
-            return containTree(root.right, item);
         }
+        return containTree(root.right, item);
     }
 
     private static final List<TreeNode> list = new ArrayList<>();
@@ -94,23 +91,23 @@ public class TreeNode {
     public static int countNode(TreeNode node) {
         if (node == null) {
             return 0;
-        } else {
-            int left = countNode(node.left);
-            int right = countNode(node.right);
-            return 1 + left + right;
         }
+        int left = countNode(node.left);
+        int right = countNode(node.right);
+        return 1 + left + right;
+
     }
 
-    public static int getDepth() {
-        return depth;
+    public static int getMaxDepth() {
+        return MAX_DEPTH;
     }
 
     public static void findMaxDepth(TreeNode node, int result) {
         if (node == null) {
             return;
         }
-        if (depth < result) {
-            depth = result;
+        if (MAX_DEPTH < result) {
+            MAX_DEPTH = result;
         }
 
         if (node.left != null) {
@@ -119,5 +116,14 @@ public class TreeNode {
         if (node.right != null) {
             findMaxDepth(node.right, result + 1);
         }
+    }
+
+    public static int getAllDepth(TreeNode node, int result) {
+        if (node == null) {
+            return 0;
+        } else if (node.left == null && node.right == null) {
+            return result;
+        }
+        return getAllDepth(node.left, result + 1) + getAllDepth(node.right, result + 1);
     }
 }
