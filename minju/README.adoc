@@ -11,7 +11,7 @@
 |Chapter 5 | -
 |Chapter 6 | -
 |Chapter 7 | -
-|Chapter 8 | 2번까지 풀이
+|Chapter 8 | -
 |Chapter 9 | -
 |Chapter 10 | 1, 5번 풀이
 |===
