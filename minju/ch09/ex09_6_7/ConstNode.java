@@ -1,4 +1,4 @@
-package ex09_6;
+package ex09_6_7;
 
 public class ConstNode extends ExpNode {
 
@@ -16,5 +16,15 @@ public class ConstNode extends ExpNode {
     @Override
     public void printStackCommands() {
         System.out.println("Push " + value);
+    }
+
+    @Override
+    ExpNode derivative() {
+        return new ConstNode(0);
+    }
+
+    @Override
+    void printInfix() {
+        System.out.print(value);
     }
 }

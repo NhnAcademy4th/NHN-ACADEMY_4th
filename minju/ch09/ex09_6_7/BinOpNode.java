@@ -1,4 +1,4 @@
-package ex09_6;
+package ex09_6_7;
 
 import java.util.Objects;
 
@@ -53,9 +53,42 @@ public class BinOpNode extends ExpNode {
     }
 
     @Override
-    void printStackCommands() {
+    public void printStackCommands() {
         left.printStackCommands();
         right.printStackCommands();
         System.out.println("Operator " + operator);
     }
+
+    @Override
+    public ExpNode derivative() {
+        switch (operator) {
+            case '+':
+            case '-':
+                return new BinOpNode(operator, left.derivative(), right.derivative());
+            case '*':
+                return new BinOpNode('+',
+                        new BinOpNode(operator, left, right.derivative()),
+                        new BinOpNode(operator, right, left.derivative()));
+            case '/':
+                return new BinOpNode(operator,
+                        new BinOpNode('-',
+                                new BinOpNode('*', right, left.derivative()),
+                                new BinOpNode('*', left, right.derivative())),
+                        new BinOpNode('*', right, right));
+
+            default:
+                return null;
+        }
+    }
+
+    @Override
+    void printInfix() {
+        System.out.print("(");
+        left.printInfix();
+        System.out.print(" " + operator + " ");
+        right.printInfix();
+        System.out.print(")");
+
+    }
+
 }

@@ -1,4 +1,4 @@
-package ex09_6;
+package ex09_6_7;
 
 public class VariableNode extends ExpNode {
 
@@ -10,6 +10,16 @@ public class VariableNode extends ExpNode {
     @Override
     public void printStackCommands() {
         System.out.println("Push X");
+    }
+
+    @Override
+    ExpNode derivative() {
+        return new ConstNode(1);
+    }
+
+    @Override
+    void printInfix() {
+        System.out.print("x");
     }
 
 }

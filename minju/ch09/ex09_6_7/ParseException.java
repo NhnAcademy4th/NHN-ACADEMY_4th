@@ -1,4 +1,4 @@
-package ex09_6;
+package ex09_6_7;
 
 public class ParseException extends Exception {
     public ParseException(String message) {
