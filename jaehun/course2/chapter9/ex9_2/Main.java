@@ -1,13 +1,14 @@
 package course2.chapter9.ex9_2;
 
+import course2.chapter9.BinarySortTree;
 import java.io.IOException;
 import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
-        final String INPUT_FILE_PATH = "chapter9/ex9_2/text/wordList.txt";
-        final String OUTPUT_FILE_PATH = "chapter9/ex9_2/text/sortedWordList.txt";
+    public static void main(String[] args) throws IOException {
+        final String INPUT_FILE_PATH = "./wordList.txt";
+        final String OUTPUT_FILE_PATH = "./resources/sortedWordList.txt";
 
         try {
             List<String> words = FileHandler.loadFile(INPUT_FILE_PATH);

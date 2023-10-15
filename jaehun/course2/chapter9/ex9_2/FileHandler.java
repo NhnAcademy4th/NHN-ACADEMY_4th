@@ -21,9 +21,9 @@ public class FileHandler {
         return words;
     }
 
-    public static void writeToFile(String sortedwords, String outputFilePath) throws IOException {
+    public static void writeToFile(String sortedWords, String outputFilePath) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-            writer.write(sortedwords);
+            writer.write(sortedWords);
             writer.newLine();
         }
     }
