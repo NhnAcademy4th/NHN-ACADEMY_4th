@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SimpleParser {
 
     private String[] values;
-    private int count;
+    private int index;
     private ExpNode expression;
 
     public void startParse(int init) {
@@ -17,7 +17,7 @@ public class SimpleParser {
                 break;
             }
             values = line.split(" ");
-            count = -1;
+            index = -1;
             try {
                 expression = expressionTree();
                 printExpression(init);
@@ -57,8 +57,8 @@ public class SimpleParser {
         ExpNode expNode = termTree();
         String operator;
         try {
-            while (values[count + 1].matches("[+-]")) {
-                operator = values[++count];
+            while (values[index + 1].matches("[+-]")) {
+                operator = values[++index];
                 if (operator.length() != 1) {
                     throw new ParseException("expressionTree() : " + operator + "는 잘못된 연산자입니다.");
                 }
@@ -75,8 +75,8 @@ public class SimpleParser {
         ExpNode term = factorTree();
         String operator;
         try {
-            while (values[count + 1].matches("[/*]")) {
-                operator = values[++count];
+            while (values[index + 1].matches("[/*]")) {
+                operator = values[++index];
                 if (operator.length() != 1) {
                     throw new ParseException("expressionTree() : " + operator + "는 잘못된 연산자입니다.");
                 }
@@ -90,7 +90,7 @@ public class SimpleParser {
     }
 
     private ExpNode factorTree() throws ParseException {
-        String term = values[++count];
+        String term = values[++index];
         if (term.matches("\\(?-?\\d+\\.?\\d?+\\)?")) {
             term = term.replace("(", "");
             term = term.replace(")", "");
@@ -99,7 +99,7 @@ public class SimpleParser {
             return new VariableNode();
         } else if (term.equals("(")) {
             ExpNode nextTerm = expressionTree();
-            if (!values[++count].equals(")"))
+            if (!values[++index].equals(")"))
                 throw new ParseException("factorTree() : 오른쪽 괄호가 입력되지 않았습니다.");
             return nextTerm;
         }

@@ -43,7 +43,7 @@ public class ex09_5 {
         if (Objects.isNull(tree)) {
             return 0;
         }
-        if (Objects.isNull(tree.left) || Objects.isNull(tree.right)) {
+        if (Objects.isNull(tree.left) && Objects.isNull(tree.right)) {
             return 1;
         }
         return countLeaves(tree.left) + countLeaves(tree.right);
