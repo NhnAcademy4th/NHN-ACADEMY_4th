@@ -1,20 +1,23 @@
-package course2.chapter9.ex9_2;
+package course2.chapter9;
 
-public class BinarySortTree {
-    private Node rootNode = null;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void insert(String element) {
+public class BinarySortTree <T extends Comparable<T>>{
+    private Node<T> rootNode=null;
+
+    public void insert(T element) {
         if (this.rootNode == null) {
-            this.rootNode = new Node(element);
+            this.rootNode = new Node<>(element);
         } else {
-            this.rootNode = findLeafNode(this.rootNode, new Node(element));
+            this.rootNode = findLeafNode(this.rootNode, new Node<>(element));
         }
     }
 
-    private Node findLeafNode(Node node, Node newNode) {
+    private Node<T> findLeafNode(Node<T> node, Node<T> newNode) {
         if (node == null) {
             return newNode;
-        } else if (node.value.compareTo(newNode.value)>0) {
+        } else if (node.getValue().compareTo(newNode.getValue())>0) {
             node.leftChild = findLeafNode(node.leftChild, newNode);
         } else {
             node.rightChild = findLeafNode(node.rightChild, newNode);
@@ -31,8 +34,12 @@ public class BinarySortTree {
     private void recursionForInorder(StringBuilder sb, Node node) {
         if (node != null) {
             recursionForInorder(sb, node.leftChild);
-            sb.append(node.value+"\r\n");
+            sb.append(node.getValue()).append("\r\n");
             recursionForInorder(sb, node.rightChild);
         }
+    }
+
+    public Node<T> getRootNode(){
+        return this.rootNode;
     }
 }
