@@ -5,9 +5,6 @@ import java.math.BigInteger;
  */
 public class ex09_1 {
 
-    private static BigInteger one = BigInteger.valueOf(1L);
-    private static BigInteger two = BigInteger.valueOf(2L);
-
     public static void main(String[] args) {
         System.out.println(factorial(BigInteger.valueOf(2L)));
         System.out.println(fibonacci(BigInteger.valueOf(10L)));
@@ -17,8 +14,8 @@ public class ex09_1 {
         if (number.signum() == -1)
             throw new IllegalArgumentException("factorial : number < 0");
         if (number.signum() == 0)
-            return one;
-        return number.multiply(factorial(number.subtract(one)));
+            return BigInteger.ONE;
+        return number.multiply(factorial(number.subtract(BigInteger.ONE)));
     }
 
     public static BigInteger fibonacci(BigInteger number) {
@@ -26,9 +23,9 @@ public class ex09_1 {
             throw new IllegalArgumentException("fibonacci : number < 0");
         if (number.signum() == 0)
             return BigInteger.valueOf(0);
-        if (number.equals(one) || number.equals(two))
-            return one;
-        return fibonacci(number.subtract(one)).add(fibonacci(number.subtract(two)));
+        if (number.equals(BigInteger.ONE) || number.equals(BigInteger.TWO))
+            return BigInteger.ONE;
+        return fibonacci(number.subtract(BigInteger.ONE)).add(fibonacci(number.subtract(BigInteger.TWO)));
     }
 
 }
