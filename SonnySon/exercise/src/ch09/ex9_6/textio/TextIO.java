@@ -57,6 +57,7 @@ public class TextIO {
      */
     public final static char EOLN = '\n';          // The value returned by peek() when at end-of-line.
 
+
     /**
      * After this method is called, input will be read from standard input (as it
      * is in the default state).  If a file or stream was previously the input source, that file
