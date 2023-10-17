@@ -1,5 +1,10 @@
 package ch09.ex9_2;
 
+import java.util.AbstractMap;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.TreeSet;
+
 public class BinaryTree<T extends Comparable<T>>{
     protected TreeNode root;
     protected class TreeNode{
