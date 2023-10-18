@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.function.Predicate;
 
-public class SimpleInterpreter1 {
+public class SimpleInterpreter {
 
     private static class ParseError extends Exception {
         ParseError(String message) {
@@ -48,7 +48,7 @@ public class SimpleInterpreter1 {
     private char[] terms;
     private int index;
 
-    public SimpleInterpreter1() {
+    public SimpleInterpreter() {
         setSymbolTable();
         start();
     }
@@ -248,7 +248,7 @@ public class SimpleInterpreter1 {
     }
 
     public static void main(String[] args) {
-        new SimpleInterpreter1();
+        new SimpleInterpreter();
     }
 
 }
