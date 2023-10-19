@@ -27,7 +27,7 @@ public class Predicates<T> {
     }
 
     public static <T> List<T> collect(Collection<T> coll, Predicate<T> pred) {
-        retain(coll, pred);
+        remove(coll, pred);
         return (List<T>) coll;
     }
 
