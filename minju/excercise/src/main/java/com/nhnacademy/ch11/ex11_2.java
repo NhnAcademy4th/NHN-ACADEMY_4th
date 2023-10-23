@@ -12,6 +12,18 @@ public class ex11_2 {
     private static final String FILE_NAME = "ex11";
 
     public static void main(String[] args) {
+        for (String arg : args) {
+            URL url = ex11_2.class.getClassLoader().getResource(arg);
+            if (Objects.isNull(url)) {
+                System.out.println("파일을 찾을 수 없습니다.");
+                continue;
+            }
+            String filepath = url.getPath();
+            printFileLines(filepath);
+        }
+    }
+
+    public static void testPrintFileLines() {
         URL url = ex11_2.class.getClassLoader().getResource(FILE_NAME);
         if (Objects.nonNull(url)) {
             String filepath = url.getPath();
@@ -20,7 +32,6 @@ public class ex11_2 {
     }
 
     public static void printFileLines(String filepath) {
-
         if (Objects.isNull(filepath)) {
             throw new IllegalArgumentException("readFile : 잘못된 파일 경로가 입력되었습니다.");
         }
