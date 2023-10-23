@@ -4,17 +4,16 @@ import com.nhnacademy.Inputshell;
 import java.io.File;
 
 public class DirectoryList {
-    private static void listingFiles(File dir, String fileName) {
+    private static void listingFiles(File dir) {
         String[] files;
         files = dir.list();
-        fileName += " ";
         for (String file : files) {
             File reFile = new File(dir, file);
             if (reFile.isDirectory()) {
                 System.out.println(reFile);
-                listingFiles(reFile, fileName);
+                listingFiles(reFile);
             } else {
-                System.out.println(fileName + file);
+                System.out.println(file);
             }
         }
     }
@@ -46,7 +45,7 @@ public class DirectoryList {
 
         File directory = setDirectoryPath();
 
-        listingFiles(directory, "");
+        listingFiles(directory);
     }
 
 }
