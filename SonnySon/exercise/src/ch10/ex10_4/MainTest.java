@@ -22,7 +22,7 @@ public class MainTest {
         retain(list,(a) -> a%2 == 1);
 
         System.out.println(list);
-        System.out.println(collect(list,(a)-> a%3==0));
-        System.out.println(find(list, (a)-> a%5 == 0));
+        System.out.println(collect(list, (a) -> a % 3 == 0));
+        System.out.println(find(list, (a) -> a % 5 == 0));
     }
 }
