@@ -1,19 +1,19 @@
-package com.nhnacademy.algorithm
+package com.nhnacademy.algorithm;
 
 /**
  * Main
  */
-public class Main {
+public class 최소공배수 {
 
     private static final int[][] TEST_CASES = {
-            { 0, 0 },
-            { 1, 1 },
-            { 98, 49 },
-            { 2, 81 },
-            { 3, 7 },
-            { 19, 87 },
-            { 1, 40 },
-            { 9929, 3384 }
+            {0, 0},
+            {1, 1},
+            {98, 49},
+            {2, 81},
+            {3, 7},
+            {19, 87},
+            {1, 40},
+            {9929, 3384}
     };
 
     private static final int[] TEST_CASES_RESULTS = {
