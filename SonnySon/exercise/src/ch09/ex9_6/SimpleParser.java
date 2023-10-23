@@ -1,5 +1,7 @@
 package ch09.ex9_6;
 import ch09.ex9_6.textio.TextIO;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class SimpleParser {
     abstract private static class ExpNode {
