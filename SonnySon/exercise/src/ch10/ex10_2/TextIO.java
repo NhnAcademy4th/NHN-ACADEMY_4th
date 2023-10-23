@@ -1,7 +1,9 @@
 package ch10.ex10_2;
 
 import java.io.*;
+import java.util.NoSuchElementException;
 import java.util.Objects;
+import org.w3c.dom.Text;
 
 public class TextIO {
     static String buffer = null;
@@ -9,7 +11,6 @@ public class TextIO {
     private final static BufferedReader standardInput = new BufferedReader(new InputStreamReader(System.in));  // wraps standard input stream
     private static BufferedReader fileInput;
     private static BufferedReader in = standardInput;  // Stream that data is read from; the current input source.
-
     public static void getln(){    // Wait for user to type a line and press return,
         try{
             buffer = in.readLine();
@@ -17,8 +18,16 @@ public class TextIO {
                 System.exit(0);
             }
         }catch(IOException ignore){}
-
         pos = 0;
+    }
+    public static void close(){
+        try{
+            standardInput.close();
+            in.close();
+            fileInput.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
     public static void fileReader(String file){
         String path = TextIO.class.getResource("").getPath();
@@ -38,11 +47,15 @@ public class TextIO {
     public static char peek(){
         return buffer.charAt(pos);
     }
-
     public static char next(){
+        if(!hasNext()){
+            throw new NoSuchElementException();
+        }
         return buffer.charAt(pos++);
     }
     public static void trim(){
         buffer = buffer.replaceAll("\\s+","");
     }
+
+    private TextIO(){}
 }

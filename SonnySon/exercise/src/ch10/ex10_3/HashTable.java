@@ -24,11 +24,12 @@ public class HashTable {
             this.key = key;
             this.item = item;
         }
-        private void setNext(Node next){
+        void setNext(Node next){
             this.next = next;
             next.previous = this;
         }
     }
+
     public void put(String key, String value){
         Node newNode = new Node(key, value);
 
@@ -44,8 +45,10 @@ public class HashTable {
 
             // 노드의 next에 추가
             while(Objects.isNull(runner.next)){
+
                 // key 값 중복을 허용하지 않음
-                if(runner.key.equals(key)) throw new IllegalArgumentException("Error : put() Method [Key duplicated]");
+                if(runner.key.equals(key))
+                    throw new IllegalArgumentException("Error : put() Method [Key duplicated]");
                 runner = runner.next;
             }
             runner.setNext(newNode);
@@ -57,11 +60,11 @@ public class HashTable {
         int hash = Math.abs(key.hashCode() % TABLESIZE);
         if(Objects.isNull(hashTable[hash])){
             // 중복 해쉬값이 없는경우 예외
-            throw new IllegalArgumentException("Error : get() Method [Key isn't exist]");
+            return null;
         }
         else{
             Node runner = hashTable[hash];
-            while(!Objects.isNull(runner)){
+            while(Objects.nonNull(runner)){
                 if(runner.key.equals(key)) return runner.item;
                 runner = runner.next;
             }

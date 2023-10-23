@@ -3,23 +3,25 @@ package ch10.ex10_2;
 import java.util.TreeSet;
 import java.util.regex.Pattern;
 
-public class SetCalculator {
-    TreeSet<Integer> set;
+public class SetCalculator <T extends Comparable>{
+    TreeSet<T> set;
+    private void routin(){
+        setInput();
+        set = registSet();
+        operator();
+    }
     private void setInput(){
         while(true){
             TextIO.getln();
             TextIO.trim();
             if(Pattern.matches("^(\\[\\d+(,\\d+)*\\])[\\+\\-\\*](\\[\\d+(,\\d+)*\\])$",TextIO.buffer)) break;
-            else System.out.println("형식에 맞지 않습니다.");
+            System.out.println("형식에 맞지 않습니다.");
         }
-
-        set = registSet();
-        operator();
     }
 
     private void operator() {
-        char oper = TextIO.next();
-        switch (oper){
+        char operator = TextIO.next();
+        switch (operator){
             case '+':
                 set.addAll(registSet());
                 System.out.print(set);
@@ -37,8 +39,8 @@ public class SetCalculator {
         }
     }
 
-    private TreeSet<Integer> registSet(){
-        TreeSet<Integer> resultList = new TreeSet<>();
+    private TreeSet<T> registSet(){
+        TreeSet<T> resultList = new TreeSet<>();
         if(TextIO.next() == '['){
             while(true){
                 resultList.add(createInteger());
@@ -47,16 +49,17 @@ public class SetCalculator {
         }
         return resultList;
     }
-    private int createInteger(){
+    private T createInteger(){
         StringBuilder sb = new StringBuilder();
         while(Character.isDigit(TextIO.peek())){
             sb.append(TextIO.next());
         }
-        return Integer.parseInt(sb.toString());
+        return (T) sb.toString();
     }
 
     public static void main(String[] args) {
         SetCalculator calculator = new SetCalculator();
-        calculator.setInput();
+        calculator.routin();
+        TextIO.close();
     }
 }
