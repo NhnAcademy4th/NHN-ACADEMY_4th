@@ -29,5 +29,7 @@ public class LineCounts {
         lc.readLn(args);
         System.out.println(lc.getFileLineCount());
         lc.close();
+        File file = new File(new File(""),"name");
+        System.out.println(file);
     }
 }
