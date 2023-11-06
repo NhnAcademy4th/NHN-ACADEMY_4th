@@ -1,8 +1,8 @@
-package com.nhnacademy.algorithm
+package com.nhnacademy.algorithm;
 
 import java.math.BigDecimal;
 
-public class Main {
+public class 소수분수변환 {
 
     public static class Fraction {
         private int numerator; // 분자
@@ -47,7 +47,6 @@ public class Main {
      * ex) <br/>
      * 0.01 -> 100을 곱하기 위해 2를 return <br/>
      * 0.1 -> 10을 곱하기 위해 1을 return
-     *
      *
      * @param num 소수 값
      * @return 소수점 이하 자리 수 값
